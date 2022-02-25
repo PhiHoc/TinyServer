@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="MultipleSuite" parallel="false" preserve-order="true">
+
+	<suite-files>
+	    <suite-file path="RegisterTestCase.xml"></suite-file>
+	    <suite-file path="LoginTestCase.xml"></suite-file>
+	    <suite-file path="MyAccountTestCase.xml"></suite-file>
+	    <suite-file path="OrderTestCase.xml"></suite-file>
+	    <suite-file path="SearchTestCase.xml"></suite-file>
+	    <suite-file path="SortTestCase.xml"></suite-file>
+	    <suite-file path="WishlistCompareRecentViewTestCase.xml"></suite-file>
+	    <suite-file path="AdminTestCase.xml"></suite-file>
+	</suite-files>
+
+</suite>
+	

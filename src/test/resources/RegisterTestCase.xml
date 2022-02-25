@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop commerce" parallel="false">
+
+	<listeners>
+		<listener class-name="commons.MethodListener" />
+		<listener class-name="reportConfig.ExtentReportListenerVersion4" />
+		<listener class-name="org.uncommons.reportng.HTMLReporter" />
+		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+	</listeners>
+
+	<parameter name="url" value="https://demo.nopcommerce.com/" />
+	
+<!-- 	<test name="Run on FIREFOX"> -->
+<!-- 		<parameter name="browser" value="firefox"></parameter> -->
+<!-- 		<classes> -->
+<!-- 				<class name="com.nopcommerce.register.RegisterTabTest" /> -->
+<!-- 		</classes> -->
+<!-- 	</test> -->
+	
+	
+	
+	 <test name="Run on CHROME">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+				<class name="com.nopcommerce.register.RegisterTabTest" />
+		</classes>
+	</test>
+</suite>
+	

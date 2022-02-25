@@ -1,0 +1,750 @@
+[INFO ] [2022-02-24 16:22:20,045] Before testing - Step 01: Open Home Page
+[INFO ] [2022-02-24 16:22:20,051] Before testing - Step 02: Open Register Page
+[INFO ] [2022-02-24 16:22:22,151] Register - Step 01: Enter to all validation field with empty data
+[INFO ] [2022-02-24 16:22:27,024] Register - Step 02: Click register button
+[INFO ] [2022-02-24 16:22:27,787] Register - Step 03: Verify error message by empty name
+[INFO ] [2022-02-24 16:22:27,932]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:27,933] Register - Step 04: Verify error message by empty last name
+[INFO ] [2022-02-24 16:22:28,151]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:28,151] Register - Step 05: Verify error message by empty email
+[INFO ] [2022-02-24 16:22:28,566]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:28,566] Register - Step 06: Verify error message by empty password
+[INFO ] [2022-02-24 16:22:28,696]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:28,697] Register - Step 07: Verify error message by empty confirm password
+[INFO ] [2022-02-24 16:22:28,803]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:29,094] Register Invalid email - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:22:29,750] Register Invalid email - Step 02: Enter invalid mail
+[INFO ] [2022-02-24 16:22:30,626] Register Invalid email - Step 03: Click register button
+[INFO ] [2022-02-24 16:22:31,332] Register Invalid email - Step 04: Verify error message
+[INFO ] [2022-02-24 16:22:31,510]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:31,518] Register valid data - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:22:32,113] Register valid data - Step 02: Enter to all validation field with valid data 
+[INFO ] [2022-02-24 16:22:37,531] Register valid data - Step 03: Click on register button
+[INFO ] [2022-02-24 16:22:43,391] Register valid data - Step 05: Verify register successfull
+[INFO ] [2022-02-24 16:22:43,484]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:45,486] Register Existed email - Step 1: Open Register Page
+[INFO ] [2022-02-24 16:22:46,831] Register Existed email - Step 02: Enter to all field but email is existed
+[INFO ] [2022-02-24 16:22:51,767] Register Existed email - Step 3: Click on register button
+[INFO ] [2022-02-24 16:22:53,025] Register Existed email - Step 4: Verify existed email error message
+[INFO ] [2022-02-24 16:22:53,152]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:53,164] Register with password less than 6 characters - Step 1: Refresh the current page
+[INFO ] [2022-02-24 16:22:53,689] Register with password less than 6 characters - Step 2: Enter password less than 6 char 
+[INFO ] [2022-02-24 16:22:54,453] Register with password less than 6 characters - Step 3: Click on register button 
+[INFO ] [2022-02-24 16:22:55,157] Register with password less than 6 characters - Step 4: Verify password erorr message
+[INFO ] [2022-02-24 16:22:55,284]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:22:55,292] Register with wrong confirm password - Step 1: Refresh the current page
+[INFO ] [2022-02-24 16:22:55,826] Register with wrong confirm password - Step 02: Enter to all validation field with valid data but email is existed
+[INFO ] [2022-02-24 16:23:01,086] Register with wrong confirm password - Step 03: Click on register button 
+[INFO ] [2022-02-24 16:23:01,770] Register with wrong confirm password - Step 04: Verify confirm password not match erorr message
+[INFO ] [2022-02-24 16:23:01,857]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:08,427] Before testing - Step 01: Open Home Page
+[INFO ] [2022-02-24 16:23:08,427] Before testing - Step 02: Open Register Page
+[INFO ] [2022-02-24 16:23:10,096] Register valid data - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:23:10,729] Register valid data - Step 02: Enter to all validation field with valid data 
+[INFO ] [2022-02-24 16:23:17,679] Register valid data - Step 03: Click on register button
+[INFO ] [2022-02-24 16:23:19,955] Register valid data - Step 05: Verify register successfull
+[INFO ] [2022-02-24 16:23:20,122]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:27,839] Before testing - Step 1: Open home Page
+[INFO ] [2022-02-24 16:23:27,840] Before testing - Step 2: Click to login page
+[INFO ] [2022-02-24 16:23:29,508] Login empty data - Step 01: Login with empty email and password
+[INFO ] [2022-02-24 16:23:31,644] Login empty data - Step 02: Verify error message
+[INFO ] [2022-02-24 16:23:31,725]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:31,732] Login invalid data - Step 01: Refresh the current page 
+[INFO ] [2022-02-24 16:23:32,480] Login invalid data - Step 02: Login with an invalid email 
+[INFO ] [2022-02-24 16:23:34,907] Login invalid data - Step 03: Verify error message
+[INFO ] [2022-02-24 16:23:35,068]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:35,077] Login empty data - Step 01: Refresh the current page 
+[INFO ] [2022-02-24 16:23:35,609] Login empty data - Step 02: Login with an unregister email
+[INFO ] [2022-02-24 16:23:38,476] Login empty data - Step 03: Verify error message
+[INFO ] [2022-02-24 16:23:38,668]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:38,675] Login empty password - Step 01: Refresh the current page 
+[INFO ] [2022-02-24 16:23:39,221] Login empty password - Step 02: Login with valid email but empty password
+[INFO ] [2022-02-24 16:23:42,478] Login empty password - Step 03: Verify error message
+[INFO ] [2022-02-24 16:23:42,621]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:42,630] Login wrong password - Step 01: Refresh the current page 
+[INFO ] [2022-02-24 16:23:42,664] Login wrong password - Step 02: Login with valid email but wrong password
+[INFO ] [2022-02-24 16:23:46,002] Login wrong password - Step 03: Verify error message
+[INFO ] [2022-02-24 16:23:46,098]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:46,105] Login valid data - Step 01: Refresh the current page 
+[INFO ] [2022-02-24 16:23:46,570] Login valid data - Step 02: Login with valid email and password
+[INFO ] [2022-02-24 16:23:49,821] Login valid data - Step 03: Verify current page are home page
+[INFO ] [2022-02-24 16:23:49,821] Verify is logout link displayed
+[INFO ] [2022-02-24 16:23:50,088]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:50,088] Verify is my account link displayed
+[INFO ] [2022-02-24 16:23:50,178]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:23:59,504] Before testing - Step 01: Open Home Page
+[INFO ] [2022-02-24 16:23:59,504] Before testing - Step 02: Open Register Page
+[INFO ] [2022-02-24 16:24:00,969] Register valid data - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:24:01,837] Register valid data - Step 02: Enter to all validation field with valid data 
+[INFO ] [2022-02-24 16:24:06,722] Register valid data - Step 03: Click on register button
+[INFO ] [2022-02-24 16:24:08,698] Register valid data - Step 05: Verify register successfull
+[INFO ] [2022-02-24 16:24:08,792]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:15,136] Before testing - Step 1: Open home Page
+[INFO ] [2022-02-24 16:24:15,136] Before testing - Step 2: Login an account
+[INFO ] [2022-02-24 16:24:21,249] Update customer info - Step 0: CLick on female radio
+[INFO ] [2022-02-24 16:24:22,886] Update customer info - Step 01: CLick on female radio
+[INFO ] [2022-02-24 16:24:23,120] Update customer info - Step 02: Update data
+[INFO ] [2022-02-24 16:24:26,931] Update customer info - Step 03: Click save button
+[INFO ] [2022-02-24 16:24:28,495] Update customer info - Step 04: Verify female gender is checked
+[INFO ] [2022-02-24 16:24:28,540]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:28,540] Update customer info - Step 05: Verify first name
+[INFO ] [2022-02-24 16:24:28,602]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:28,602] Update customer info - Step 06: Verify last name
+[INFO ] [2022-02-24 16:24:28,671]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:28,672] Update customer info - Step 07: Verify date of birth day
+[INFO ] [2022-02-24 16:24:28,998]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:28,998] Update customer info - Step 08: Verify date of birth month
+[INFO ] [2022-02-24 16:24:29,126]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:29,127] Update customer info - Step 09: Verify date of birth year
+[INFO ] [2022-02-24 16:24:30,411]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:30,411] Update customer info - Step 10: Verify email
+[INFO ] [2022-02-24 16:24:30,472]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:30,472] Update customer info - Step 11: Verify company name
+[INFO ] [2022-02-24 16:24:30,524]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:30,534] Add address - Step 01: Click to addresses
+[INFO ] [2022-02-24 16:24:35,006] Add address - Step 02: Click to add new button
+[INFO ] [2022-02-24 16:24:38,569] Add address - Step 03: Enter data to all field
+[INFO ] [2022-02-24 16:24:47,447] Add address - Step 4: Click save button
+[INFO ] [2022-02-24 16:24:50,238] Add address - Step 5: Verify title
+[INFO ] [2022-02-24 16:24:50,390]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:50,390] Add address - Step 6: Verify name
+[INFO ] [2022-02-24 16:24:50,509]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:50,509] Add address - Step 7: Verify email
+[INFO ] [2022-02-24 16:24:51,550]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:51,550] Add address - Step 8: Verify phone
+[INFO ] [2022-02-24 16:24:51,840]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:51,840] Add address - Step 9: Verify fax
+[INFO ] [2022-02-24 16:24:51,945]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:51,945] Add address - Step 10: Verify company
+[INFO ] [2022-02-24 16:24:52,101]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:52,101] Add address - Step 11: Verify address 1
+[INFO ] [2022-02-24 16:24:52,185]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:52,186] Add address - Step 12: Verify address 2
+[INFO ] [2022-02-24 16:24:52,267]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:52,267] Add address - Step 13: Verify city, zip
+[INFO ] [2022-02-24 16:24:52,342]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:52,342] Add address - Step 14: Verify country
+[INFO ] [2022-02-24 16:24:52,419]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:24:52,428] Change password - Step 01: Click to change password
+[INFO ] [2022-02-24 16:25:00,754] Change password - Step 02: Enter to old password
+[INFO ] [2022-02-24 16:25:01,524] Change password - Step 03: Enter to new password
+[INFO ] [2022-02-24 16:25:02,242] Change password - Step 04: Enter to confirm password
+[INFO ] [2022-02-24 16:25:02,980] Change password - Step 05: Click to change password button
+[INFO ] [2022-02-24 16:25:05,684] Change password - Step 06: Verify 'password was change' message on notification bar
+[INFO ] [2022-02-24 16:25:05,783]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:05,783] Change password - Step 07: Click close on password was change notification
+[INFO ] [2022-02-24 16:25:06,397] Change password - Step 08: Log out
+[INFO ] [2022-02-24 16:25:08,834] Change password - Step 09: Click to login page
+[INFO ] [2022-02-24 16:25:10,226] Change password - Step 10: Log in again with updated email and old password
+[INFO ] [2022-02-24 16:25:12,889] Change password - Step 11: Verify error message by wrong password
+[INFO ] [2022-02-24 16:25:13,075] Change password - Step 12: Log in again with new password
+[INFO ] [2022-02-24 16:25:16,534] Change password  - Step 13: Verify current page are home page
+[INFO ] [2022-02-24 16:25:16,534] Verify is logout link displayed
+[INFO ] [2022-02-24 16:25:16,663]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:16,663] Verify is my account link displayed
+[INFO ] [2022-02-24 16:25:16,946]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:16,960] Review product - Step 02: Click to product Apple MacBook Pro 13-inch
+[INFO ] [2022-02-24 16:25:19,467] Review product - Step 03: Click to add your review
+[INFO ] [2022-02-24 16:25:22,536] Review product - Step 04: Enter to review title
+[INFO ] [2022-02-24 16:25:23,272] Review product - Step 05: Enter to review text
+[INFO ] [2022-02-24 16:25:24,104] Review product - Step 06: Click to submit button
+[INFO ] [2022-02-24 16:25:25,442] Review product - Step 07: Click to my account
+[INFO ] [2022-02-24 16:25:26,818] Review product - Step 08: Click to my product review
+[INFO ] [2022-02-24 16:25:29,795] Review product - Step 09: Verify review title
+[INFO ] [2022-02-24 16:25:29,867]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:29,867] Review product - Step 10: Verify review text
+[INFO ] [2022-02-24 16:25:29,951]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:37,082] Before testing - Step 01: Open Home Page
+[INFO ] [2022-02-24 16:25:37,082] Before testing - Step 02: Open Register Page
+[INFO ] [2022-02-24 16:25:38,696] Register valid data - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:25:39,253] Register valid data - Step 02: Enter to all validation field with valid data 
+[INFO ] [2022-02-24 16:25:45,056] Register valid data - Step 03: Click on register button
+[INFO ] [2022-02-24 16:25:47,404] Register valid data - Step 05: Verify register successfull
+[INFO ] [2022-02-24 16:25:47,523]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:25:55,681] Before testing - Step 1: Open home Page
+[INFO ] [2022-02-24 16:25:55,681] Before testing - Step 2: Login an account
+[INFO ] [2022-02-24 16:26:00,706] Add product to cart - Step 1: Open computers page
+[INFO ] [2022-02-24 16:26:02,374] Add product to cart - Step 2: Click to desktop link
+[INFO ] [2022-02-24 16:26:03,817] Add product to cart - Step 3: Click to build your own computer product
+[INFO ] [2022-02-24 16:26:06,559] Add product to cart - Step 4: Select 2.5Ghz processor
+[INFO ] [2022-02-24 16:26:06,708] Add product to cart - Step 5: Select 8GB RAM
+[INFO ] [2022-02-24 16:26:06,924] Add product to cart - Step 6: Select 400GB HDD
+[INFO ] [2022-02-24 16:26:07,175] Add product to cart - Step 6: Select premium OS
+[INFO ] [2022-02-24 16:26:07,429] Add product to cart - Step 7: Check to microsoft office software 
+[INFO ] [2022-02-24 16:26:07,510] Add product to cart - Step 8: Check to Acrobat Reader software 
+[INFO ] [2022-02-24 16:26:07,742] Add product to cart - Step 9: Check to Total Comander software 
+[INFO ] [2022-02-24 16:26:07,959] Add product to cart - Step 10: Click to add to cart 
+[INFO ] [2022-02-24 16:26:08,609] Add product to cart - Step 11: Verify notification bar message 
+[INFO ] [2022-02-24 16:26:09,083]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:09,083] Add product to cart - Step 12: Click notification bar close button
+[INFO ] [2022-02-24 16:26:10,071] Add product to cart - Step 13: Click to shopping cart link
+[INFO ] [2022-02-24 16:26:19,212] Add product to cart - Step 14: Verify product has been added to shopping cart
+[INFO ] [2022-02-24 16:26:19,245]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:19,246] Add product to cart - Step 15: Verify product name
+[INFO ] [2022-02-24 16:26:19,321]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:19,321] Add product to cart - Step 16: Verify product price
+[INFO ] [2022-02-24 16:26:19,389]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:19,396] Edit product in shopping cart - Step 1: Click to edit link
+[INFO ] [2022-02-24 16:26:23,060] Edit product in shopping cart - Step 2: Select 2.2Ghz processor
+[INFO ] [2022-02-24 16:26:23,245] Edit product in shopping cart - Step 3: Select 4GB RAM
+[INFO ] [2022-02-24 16:26:23,425] Edit product in shopping cart - Step 4: Select 320 HDD
+[INFO ] [2022-02-24 16:26:23,623] Edit product in shopping cart - Step 5: Select home OS
+[INFO ] [2022-02-24 16:26:23,788] Edit product in shopping cart - Step 6: Check to microsoft office software 
+[INFO ] [2022-02-24 16:26:23,875] Edit product in shopping cart - Step 7: Uncheck to Acrobat Reader software 
+[INFO ] [2022-02-24 16:26:24,024] Edit product in shopping cart - Step 8: Uncheck to Total Comander software 
+[INFO ] [2022-02-24 16:26:24,185] Edit product in shopping cart - Step 9: Increase quantity to 2 
+[INFO ] [2022-02-24 16:26:24,892] Edit product in shopping cart - Step 10: Click to add to cart button
+[INFO ] [2022-02-24 16:26:25,533] Edit product in shopping cart- Step 11: Verify notification bar message 
+[INFO ] [2022-02-24 16:26:25,973]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:25,974] Edit product in shopping cart- Step 12: Click notification bar close button
+[INFO ] [2022-02-24 16:26:26,755] Edit product in shopping cart- Step 13: Click to shopping cart link
+[INFO ] [2022-02-24 16:26:28,773] Edit product in shopping cart- Step 14: Verify product name
+[INFO ] [2022-02-24 16:26:28,952]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:28,952] Edit product in shopping cart- Step 15: Verify product price
+[INFO ] [2022-02-24 16:26:29,170]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:29,170] Edit product in shopping cart- Step 16: Verify quantity
+[INFO ] [2022-02-24 16:26:29,364]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:29,364] Edit product in shopping cart- Step 17: Verify product total price
+[INFO ] [2022-02-24 16:26:29,581]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:29,587] Remove from shopping cart - Step 1: Click to remove button
+[INFO ] [2022-02-24 16:26:31,528] Remove from shopping cart - Step 2: Verify message in page body
+[INFO ] [2022-02-24 16:26:31,755]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:31,756] Remove from shopping cart - Step 3: Verify no product displayed in wishlist
+[INFO ] [2022-02-24 16:26:41,825]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:41,831] Update shopping cart - Step 1: Open computers page
+[INFO ] [2022-02-24 16:26:43,497] Update shopping cart - Step 2: Click to desktop link
+[INFO ] [2022-02-24 16:26:44,939] Update shopping cart - Step 3: Click to Lenovo IdeaCentre 600 All-in-One PC product
+[INFO ] [2022-02-24 16:26:47,410] Update shopping cart - Step 4: Click to add to cart 
+[INFO ] [2022-02-24 16:26:48,105] Update shopping cart - Step 5: Verify notification bar message 
+[INFO ] [2022-02-24 16:26:48,603]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:48,603] Update shopping cart - Step 6: Click notification bar close button
+[INFO ] [2022-02-24 16:26:49,416] Update shopping cart - Step 7: Click to shopping cart link 
+[INFO ] [2022-02-24 16:26:51,444] Update shopping cart - Step 8: Update quantity to 5
+[INFO ] [2022-02-24 16:26:52,659] Update shopping cart - Step 9: Click to update shopping cart button
+[INFO ] [2022-02-24 16:26:54,177] Update shopping cart - Step 10: Verify total price updated
+[INFO ] [2022-02-24 16:26:54,306]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:26:54,306] Update shopping cart - Step 11: Remove the product form shopping cart
+[INFO ] [2022-02-24 16:26:55,784] Checkout/ Order payment - Step 1: Open computers page
+[INFO ] [2022-02-24 16:26:57,543] Checkout/ Order payment - Step 2: Click to notebook link
+[INFO ] [2022-02-24 16:26:59,515] Checkout/ Order payment - Step 3: Click to Apple MacBook Pro 13-inch product
+[INFO ] [2022-02-24 16:27:01,818] Checkout/ Order payment - Step 4: Click to add to cart 
+[INFO ] [2022-02-24 16:27:02,539] Checkout/ Order payment - Step 5: Verify notification bar message 
+[INFO ] [2022-02-24 16:27:02,972]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:02,973] Checkout/ Order payment - Step 6: Click notification bar close button
+[INFO ] [2022-02-24 16:27:03,732] Checkout/ Order payment - Step 7: Click to shopping cart link 
+[INFO ] [2022-02-24 16:27:05,396] Checkout/ Order payment - Step 8: Click to estimate shipping link
+[INFO ] [2022-02-24 16:27:06,332] Checkout/ Order payment - Step 9: Select country
+[INFO ] [2022-02-24 16:27:06,800] Checkout/ Order payment - Step 10: Enter to zip/ postal code
+[INFO ] [2022-02-24 16:27:07,530] Checkout/ Order payment - Step 11: Wait for shipping method appear
+[INFO ] [2022-02-24 16:27:08,393] Checkout/ Order payment - Step 12: Click to apply button
+[INFO ] [2022-02-24 16:27:09,058] Checkout/ Order payment - Step 13: Check to I agree checkbox
+[INFO ] [2022-02-24 16:27:09,879] Checkout/ Order payment - Step 14: Click to checkout button
+[INFO ] [2022-02-24 16:27:12,113] Checkout/ Order payment - Step 15: Uncheck to ship to the same address
+[INFO ] [2022-02-24 16:27:12,407] Checkout/ Order payment - Step 16: Enter to billing address
+[INFO ] [2022-02-24 16:27:18,049] Checkout/ Order payment - Step 17: Click to continue button
+[INFO ] [2022-02-24 16:27:18,693] Checkout/ Order payment - Step 18: Select new address on shipping address dropdown
+[INFO ] [2022-02-24 16:27:19,247] Checkout/ Order payment - Step 19: Enter to billing address first name
+[INFO ] [2022-02-24 16:27:25,184] Checkout/ Order payment - Step 20: Click to continue button
+[INFO ] [2022-02-24 16:27:25,832] Checkout/ Order payment - Step 21: Click to shipping method continue button
+[INFO ] [2022-02-24 16:27:27,234] Checkout/ Order payment - Step 22: Select payment method check/ money order
+[INFO ] [2022-02-24 16:27:27,747] Checkout/ Order payment - Step 23: Click to payment method continue button
+[INFO ] [2022-02-24 16:27:28,370] Checkout/ Order payment - Step 24: Verify text in payment info section
+[INFO ] [2022-02-24 16:27:28,963]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:28,963] Checkout/ Order payment - Step 25: Click payment info continue button
+[INFO ] [2022-02-24 16:27:29,591] Checkout/ Order payment - Step 26: Verify billing info
+[INFO ] [2022-02-24 16:27:30,017]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,017] Checkout/ Order payment - Step 27: Verify billing info
+[INFO ] [2022-02-24 16:27:30,330]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,330] Checkout/ Order payment - Step 28: Verify Shipping Address info
+[INFO ] [2022-02-24 16:27:30,458]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,458] Checkout/ Order payment - Step 29: Verify shipping method info
+[INFO ] [2022-02-24 16:27:30,552]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,552] Checkout/ Order payment - Step 30: Verify product SKU number
+[INFO ] [2022-02-24 16:27:30,667]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,667] Checkout/ Order payment - Step 31: Verify product name
+[INFO ] [2022-02-24 16:27:30,763]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,763] Checkout/ Order payment - Step 32: Verify product price
+[INFO ] [2022-02-24 16:27:30,849]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,849] Checkout/ Order payment - Step 33: Verify product price
+[INFO ] [2022-02-24 16:27:30,925]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:30,925] Checkout/ Order payment - Step 34: Verify product quantity
+[INFO ] [2022-02-24 16:27:31,028]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,028] Checkout/ Order payment - Step 35: Verify product sub total
+[INFO ] [2022-02-24 16:27:31,128]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,129] Checkout/ Order payment - Step 36: Verify gift wrapping
+[INFO ] [2022-02-24 16:27:31,234]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,234] Checkout/ Order payment - Step 37: Verify order sub total
+[INFO ] [2022-02-24 16:27:31,344]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,344] Checkout/ Order payment - Step 38: Verify shipping
+[INFO ] [2022-02-24 16:27:31,487]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,487] Checkout/ Order payment - Step 39: Verify tax
+[INFO ] [2022-02-24 16:27:31,594]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,594] Checkout/ Order payment - Step 40: Verify order total
+[INFO ] [2022-02-24 16:27:31,675]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:31,675] Checkout/ Order payment - Step 41: Click to confirm button
+[INFO ] [2022-02-24 16:27:32,314] Checkout/ Order payment - Step 43: Verify order compele page body title message
+[INFO ] [2022-02-24 16:27:33,732]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:33,732] Checkout/ Order payment - Step 44: Verify is order number visible
+[INFO ] [2022-02-24 16:27:33,781]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:33,877] Checkout/ Order payment - Step 45: Click to my account page
+[INFO ] [2022-02-24 16:27:35,387] Checkout/ Order payment - Step 46: Click to order link
+[INFO ] [2022-02-24 16:27:37,189] Checkout/ Order payment - Step 47: Verify order number
+[INFO ] [2022-02-24 16:27:37,283]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:37,283] Checkout/ Order payment - Step 48: Click to detail button
+[INFO ] [2022-02-24 16:27:38,935] Checkout/ Order payment - Step 49: Verify billing info
+[INFO ] [2022-02-24 16:27:39,028]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,029] Checkout/ Order payment - Step 50: Verify billing info
+[INFO ] [2022-02-24 16:27:39,098]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,098] Checkout/ Order payment - Step 51: Verify Shipping Address info
+[INFO ] [2022-02-24 16:27:39,173]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,173] Checkout/ Order payment - Step 52: Verify shipping method info
+[INFO ] [2022-02-24 16:27:39,243]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,243] Checkout/ Order payment - Step 53: Verify product SKU number
+[INFO ] [2022-02-24 16:27:39,326]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,326] Checkout/ Order payment - Step 54: Verify product name
+[INFO ] [2022-02-24 16:27:39,425]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,425] Checkout/ Order payment - Step 55: Verify product price
+[INFO ] [2022-02-24 16:27:39,496]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,496] Checkout/ Order payment - Step 56: Verify product price
+[INFO ] [2022-02-24 16:27:39,756]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,756] Checkout/ Order payment - Step 57: Verify product quantity
+[INFO ] [2022-02-24 16:27:39,859]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:39,859] Checkout/ Order payment - Step 58: Verify product sub total
+[INFO ] [2022-02-24 16:27:40,054]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:40,055] Checkout/ Order payment - Step 59: Verify gift wrapping
+[INFO ] [2022-02-24 16:27:40,139]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:40,139] Checkout/ Order payment - Step 60: Verify order sub total
+[INFO ] [2022-02-24 16:27:40,237]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:40,246] Checkout/ Order payment - Step 1: Open computers page
+[INFO ] [2022-02-24 16:27:41,882] Checkout/ Order payment - Step 2: Click to notebook link
+[INFO ] [2022-02-24 16:27:43,357] Checkout/ Order payment - Step 3: Click to Apple MacBook Pro 13-inch product
+[INFO ] [2022-02-24 16:27:45,441] Checkout/ Order payment - Step 4: Click to add to cart 
+[INFO ] [2022-02-24 16:27:46,133] Checkout/ Order payment - Step 5: Verify notification bar message 
+[INFO ] [2022-02-24 16:27:46,668]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:27:46,669] Checkout/ Order payment - Step 6: Click notification bar close button
+[INFO ] [2022-02-24 16:27:47,324] Checkout/ Order payment - Step 7: Click to shopping cart link 
+[INFO ] [2022-02-24 16:27:48,688] Checkout/ Order payment - Step 8: Click to estimate shipping link
+[INFO ] [2022-02-24 16:27:49,398] Checkout/ Order payment - Step 9: Select country
+[INFO ] [2022-02-24 16:27:49,629] Checkout/ Order payment - Step 10: Enter to zip/ postal code
+[INFO ] [2022-02-24 16:27:50,425] Checkout/ Order payment - Step 11: Wait for shipping method appear
+[INFO ] [2022-02-24 16:27:51,275] Checkout/ Order payment - Step 12: Click to apply button
+[INFO ] [2022-02-24 16:27:51,897] Checkout/ Order payment - Step 13: Check to I agree checkbox
+[INFO ] [2022-02-24 16:27:52,763] Checkout/ Order payment - Step 14: Click to checkout button
+[INFO ] [2022-02-24 16:27:55,206] Checkout/ Order payment - Step 15: Uncheck to ship to the same address
+[INFO ] [2022-02-24 16:27:55,445] Checkout/ Order payment - Step 15.5: Selecct new billing address
+[INFO ] [2022-02-24 16:27:55,666] Checkout/ Order payment - Step 16: Enter to billing address first name
+[INFO ] [2022-02-24 16:28:01,158] Checkout/ Order payment - Step 17: Click to continue button
+[INFO ] [2022-02-24 16:28:01,802] Checkout/ Order payment - Step 18: Select new address on shipping address dropdown
+[INFO ] [2022-02-24 16:28:02,388] Checkout/ Order payment - Step 19: Enter to shipping address first name
+[INFO ] [2022-02-24 16:28:08,386] Checkout/ Order payment - Step 20: Click to continue button
+[INFO ] [2022-02-24 16:28:09,057] Checkout/ Order payment - Step 21: Click to shipping method continue button
+[INFO ] [2022-02-24 16:28:10,233] Checkout/ Order payment - Step 22: Select payment method credit card
+[INFO ] [2022-02-24 16:28:10,910] Checkout/ Order payment - Step 23: Click to payment method continue button
+[INFO ] [2022-02-24 16:28:11,610] Checkout/ Order payment - Step 24: Enter to card holder name
+[INFO ] [2022-02-24 16:28:12,668] Checkout/ Order payment - Step 25: Enter to card number
+[INFO ] [2022-02-24 16:28:13,389] Checkout/ Order payment - Step 26: Enter to card code
+[INFO ] [2022-02-24 16:28:14,240] Checkout/ Order payment - Step 27: Click payment info continue button
+[INFO ] [2022-02-24 16:28:14,953] Checkout/ Order payment - Step 28: Verify billing info
+[INFO ] [2022-02-24 16:28:15,418]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:15,418] Checkout/ Order payment - Step 29: Verify billing info
+[INFO ] [2022-02-24 16:28:15,562]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:15,562] Checkout/ Order payment - Step 30: Verify Shipping Address info
+[INFO ] [2022-02-24 16:28:15,743]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:15,743] Checkout/ Order payment - Step 31: Verify shipping method info
+[INFO ] [2022-02-24 16:28:15,883]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:15,883] Checkout/ Order payment - Step 32: Verify product SKU number
+[INFO ] [2022-02-24 16:28:15,976]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:15,976] Checkout/ Order payment - Step 33: Verify product name
+[INFO ] [2022-02-24 16:28:16,062]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,062] Checkout/ Order payment - Step 34: Verify product price
+[INFO ] [2022-02-24 16:28:16,137]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,137] Checkout/ Order payment - Step 35: Verify product price
+[INFO ] [2022-02-24 16:28:16,202]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,202] Checkout/ Order payment - Step 36: Verify product quantity
+[INFO ] [2022-02-24 16:28:16,343]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,343] Checkout/ Order payment - Step 37: Verify product sub total
+[INFO ] [2022-02-24 16:28:16,440]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,441] Checkout/ Order payment - Step 37: Verify gift wrapping
+[INFO ] [2022-02-24 16:28:16,527]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,527] Checkout/ Order payment - Step 39: Verify order sub total
+[INFO ] [2022-02-24 16:28:16,602]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,603] Checkout/ Order payment - Step 40: Verify shipping
+[INFO ] [2022-02-24 16:28:16,674]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,674] Checkout/ Order payment - Step 41: Verify tax
+[INFO ] [2022-02-24 16:28:16,759]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,759] Checkout/ Order payment - Step 42: Verify order total
+[INFO ] [2022-02-24 16:28:16,826]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:16,826] Checkout/ Order payment - Step 43: Click to confirm button
+[INFO ] [2022-02-24 16:28:17,631] Checkout/ Order payment - Step 45: Verify order compele page body title message
+[INFO ] [2022-02-24 16:28:18,770]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:18,770] Checkout/ Order payment - Step 46: Verify is order number visible
+[INFO ] [2022-02-24 16:28:18,815]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:18,913] Checkout/ Order payment - Step 47: Click to my account page
+[INFO ] [2022-02-24 16:28:20,304] Checkout/ Order payment - Step 48: Click to order link
+[INFO ] [2022-02-24 16:28:21,675] Checkout/ Order payment - Step 49: Verify order number
+[INFO ] [2022-02-24 16:28:21,779]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:21,779] Checkout/ Order payment - Step 50: Click to detail button
+[INFO ] [2022-02-24 16:28:23,142] Checkout/ Order payment - Step 51 Verify billing info
+[INFO ] [2022-02-24 16:28:23,302]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,303] Checkout/ Order payment - Step 52: Verify billing info
+[INFO ] [2022-02-24 16:28:23,385]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,385] Checkout/ Order payment - Step 53: Verify Shipping Address info
+[INFO ] [2022-02-24 16:28:23,461]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,461] Checkout/ Order payment - Step 54: Verify shipping method info
+[INFO ] [2022-02-24 16:28:23,550]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,550] Checkout/ Order payment - Step 55: Verify product SKU number
+[INFO ] [2022-02-24 16:28:23,678]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,678] Checkout/ Order payment - Step 56: Verify product name
+[INFO ] [2022-02-24 16:28:23,746]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,746] Checkout/ Order payment - Step 57: Verify product price
+[INFO ] [2022-02-24 16:28:23,823]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,824] Checkout/ Order payment - Step 58: Verify product price
+[INFO ] [2022-02-24 16:28:23,876]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,876] Checkout/ Order payment - Step 59: Verify product quantity
+[INFO ] [2022-02-24 16:28:23,937]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:23,938] Checkout/ Order payment - Step 60: Verify product sub total
+[INFO ] [2022-02-24 16:28:24,013]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:24,013] Checkout/ Order payment - Step 61: Verify gift wrapping
+[INFO ] [2022-02-24 16:28:24,324]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:24,324] Checkout/ Order payment - Step 62: Verify order sub total
+[INFO ] [2022-02-24 16:28:24,776]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:24,782] Re-order - Step 1: Click to re-order button
+[INFO ] [2022-02-24 16:28:26,574] Re-order - Step 2: Update quantity to 10
+[INFO ] [2022-02-24 16:28:27,401] Re-order - Step 3: Click to update shopping cart button
+[INFO ] [2022-02-24 16:28:29,049] Re-order - Step 4: Check to I agree checkbox
+[INFO ] [2022-02-24 16:28:29,553] Re-order - Step 5: Click to checkout button
+[INFO ] [2022-02-24 16:28:31,559] Re-order - Step 6: Uncheck to ship to the same address
+[INFO ] [2022-02-24 16:28:31,840] Re-order - Step 7: Select new billing address dropdown
+[INFO ] [2022-02-24 16:28:32,023] Re-order - Step 8: Enter to address first name
+[INFO ] [2022-02-24 16:28:37,985] Re-order - Step 16: Click to continue button
+[INFO ] [2022-02-24 16:28:38,849] Re-order - Step 17: Select new address on shipping address dropdown
+[INFO ] [2022-02-24 16:28:39,442] Re-order - Step 18: Enter to shipping address first name
+[INFO ] [2022-02-24 16:28:45,501] Re-order - Step 19: Click to continue button
+[INFO ] [2022-02-24 16:28:46,486] Re-order - Step 20: Check to next day air radio
+[INFO ] [2022-02-24 16:28:47,196] Re-order - Step 21: Click to shipping method continue button
+[INFO ] [2022-02-24 16:28:48,273] Re-order - Step 22: Select payment method check/ money order
+[INFO ] [2022-02-24 16:28:49,022] Re-order - Step 23: Click to payment method continue button
+[INFO ] [2022-02-24 16:28:50,870] Re-order - Step 24: Verify text in payment info section
+[INFO ] [2022-02-24 16:28:51,668]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:51,669] Re-order - Step 25: Click payment info continue button
+[INFO ] [2022-02-24 16:28:52,598] Re-order - Step 26: Verify billing info
+[INFO ] [2022-02-24 16:28:53,051]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,051] Re-order - Step 27: Verify billing info
+[INFO ] [2022-02-24 16:28:53,139]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,139] Re-order - Step 28: Verify Shipping Address info
+[INFO ] [2022-02-24 16:28:53,361]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,361] Re-order - Step 29: Verify shipping method info
+[INFO ] [2022-02-24 16:28:53,505]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,506] Re-order - Step 30: Verify product SKU number
+[INFO ] [2022-02-24 16:28:53,610]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,611] Re-order - Step 31: Verify product name
+[INFO ] [2022-02-24 16:28:53,701]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,701] Re-order - Step 32: Verify product price
+[INFO ] [2022-02-24 16:28:53,786]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,786] Re-order - Step 33: Verify product quantity
+[INFO ] [2022-02-24 16:28:53,909]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:53,909] Re-order - Step 34: Verify product sub total
+[INFO ] [2022-02-24 16:28:54,494]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:54,494] Re-order - Step 35: Verify gift wrapping
+[INFO ] [2022-02-24 16:28:54,805]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:54,805] Re-order - Step 36: Verify order sub total
+[INFO ] [2022-02-24 16:28:55,099]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:55,100] Re-order - Step 37: Verify shipping
+[INFO ] [2022-02-24 16:28:55,281]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:55,281] Re-order - Step 38: Verify tax
+[INFO ] [2022-02-24 16:28:55,462]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:55,462] Re-order - Step 39: Verify order total
+[INFO ] [2022-02-24 16:28:55,730]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:55,730] Re-order - Step 40: Click to confirm button
+[INFO ] [2022-02-24 16:28:56,671] Re-order - Step 42: Verify order compele page body title message
+[INFO ] [2022-02-24 16:28:58,044]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:58,044] Re-order - Step 43: Verify is order number visible
+[INFO ] [2022-02-24 16:28:58,123]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:28:58,226] Re-order - Step 44: Click to my account page
+[INFO ] [2022-02-24 16:28:59,501] Re-order - Step 45: Click to order link
+[INFO ] [2022-02-24 16:29:00,851] Re-order - Step 46: Verify order number
+[INFO ] [2022-02-24 16:29:01,224]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:01,224] Re-order - Step 47: Click to detail button
+[INFO ] [2022-02-24 16:29:02,554] Re-order - Step 48: Verify billing info
+[INFO ] [2022-02-24 16:29:02,754]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:02,755] Re-order - Step 49: Verify billing info
+[INFO ] [2022-02-24 16:29:02,837]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:02,837] Re-order - Step 50: Verify Shipping Address info
+[INFO ] [2022-02-24 16:29:02,923]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:02,923] Re-order - Step 51: Verify shipping method info
+[INFO ] [2022-02-24 16:29:02,991]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:02,991] Re-order - Step 52: Verify product SKU number
+[INFO ] [2022-02-24 16:29:03,145]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,145] Re-order - Step 53: Verify product name
+[INFO ] [2022-02-24 16:29:03,275]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,275] Re-order - Step 54: Verify product price
+[INFO ] [2022-02-24 16:29:03,343]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,344] Re-order - Step 55: Verify product quantity
+[INFO ] [2022-02-24 16:29:03,416]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,416] Re-order - Step 56: Verify product sub total
+[INFO ] [2022-02-24 16:29:03,786]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,786] Re-order - Step 57: Verify gift wrapping
+[INFO ] [2022-02-24 16:29:03,927]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:03,927] Re-order - Step 58: Verify order sub total
+[INFO ] [2022-02-24 16:29:04,013]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:10,037] Before testing - Step 1: Open Open Home Page
+[INFO ] [2022-02-24 16:29:10,038] Before testing - Step 2: Open Open Search Page
+[INFO ] [2022-02-24 16:29:12,187] Search with empty data - Step 1: Enter to search keyword with empty data
+[INFO ] [2022-02-24 16:29:12,964] Search with empty data - Step 2: Click to search button
+[INFO ] [2022-02-24 16:29:14,045] Search with empty data - Step 3: Verify error message
+[INFO ] [2022-02-24 16:29:14,137]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:14,143] Search with not exist data - Step 1: Enter to search keyword with not exist data
+[INFO ] [2022-02-24 16:29:14,913] Search with not exist data - Step 2: Click to search button
+[INFO ] [2022-02-24 16:29:15,976] Search with not exist data - Step 3: Verify error message
+[INFO ] [2022-02-24 16:29:16,034]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:16,042] Search with relative product name - Step 2: Search with keyword Lenovo
+[INFO ] [2022-02-24 16:29:16,937] Search with relative product name - Step 3: Click to search button
+[INFO ] [2022-02-24 16:29:18,264] Search with relative product name - Step 4: Verify is 2 lenovo product appear
+[INFO ] [2022-02-24 16:29:18,366]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:18,526] Search with relative product name - Step 5: Verify name of the first lenovo product
+[INFO ] [2022-02-24 16:29:18,587]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:18,587] Search with relative product name - Step 6: Verify name of the second lenovo product
+[INFO ] [2022-02-24 16:29:18,631]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:18,642] Search with absolute product name - Step 2: Search with keyword ThinkPad X1 Carbon
+[INFO ] [2022-02-24 16:29:19,481] Search with absolute product name - Step 3: Click to search button
+[INFO ] [2022-02-24 16:29:20,650] Search with absolute product name - Step 4: Verify is only 1 product appear
+[INFO ] [2022-02-24 16:29:20,696]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:20,759] Search with absolute product name - Step 5: Verify name of the product
+[INFO ] [2022-02-24 16:29:20,789]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:20,823] Avanced search with parent categories - Step 2: Search with keyword Apple MacBook Pro
+[INFO ] [2022-02-24 16:29:21,665] Avanced search with parent categories - Step 3: Check to advanced search
+[INFO ] [2022-02-24 16:29:21,895] Avanced search with parent categories - Step 4: Select computers on Category dropdown
+[INFO ] [2022-02-24 16:29:22,143] Avanced search with parent categories - Step 5: uncheck to Automatically search sub categories
+[INFO ] [2022-02-24 16:29:22,274] Avanced search with parent categories - Step 6: Click to search button
+[INFO ] [2022-02-24 16:29:23,581] Avanced search with parent categories - Step 7: Verify error message
+[INFO ] [2022-02-24 16:29:23,860]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:23,869] Avanced search with sub categories - Step 2: Search with keyword Apple MacBook Pro
+[INFO ] [2022-02-24 16:29:25,125] Avanced search with sub categories - Step 3: Check to advanced search
+[INFO ] [2022-02-24 16:29:25,190] Avanced search with sub categories - Step 4: Select computers on Category dropdown
+[INFO ] [2022-02-24 16:29:25,408] Avanced search with sub categories - Step 5: check to Automatically search sub categories
+[INFO ] [2022-02-24 16:29:25,686] Avanced search with sub categories - Step 6: Click to search button
+[INFO ] [2022-02-24 16:29:27,245] Avanced search with sub categories - Step 7: Verify 1 product appear
+[INFO ] [2022-02-24 16:29:27,474]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:27,528] Avanced search with sub categories - Step 8: Verify name of the product
+[INFO ] [2022-02-24 16:29:27,557]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:27,565] Avanced search with incorrect manufacturer - Step 2: Search with keyword Apple MacBook Pro
+[INFO ] [2022-02-24 16:29:28,398] Avanced search with incorrect manufacturer - Step 3: Check to advanced search
+[INFO ] [2022-02-24 16:29:28,495] Avanced search with incorrect manufacturer - Step 4: Select computers on Category dropdown
+[INFO ] [2022-02-24 16:29:28,654] Avanced search with incorrect manufacturer - Step 5: check to Automatically search sub categories
+[INFO ] [2022-02-24 16:29:28,720] Avanced search with incorrect manufacturer - Step 6: Select HP on manufracturer dropdown
+[INFO ] [2022-02-24 16:29:28,969] Avanced search with incorrect manufacturer - Step 7: Click to search button
+[INFO ] [2022-02-24 16:29:30,321] Avanced search with incorrect manufacturer - Step 8: Verify error message
+[INFO ] [2022-02-24 16:29:30,454]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:30,460] Avanced search with correct manufacturer - Step 2: Search with keyword Apple MacBook Pro
+[INFO ] [2022-02-24 16:29:31,302] Avanced search with correct manufacturer - Step 3: Check to advanced search
+[INFO ] [2022-02-24 16:29:31,378] Avanced search with correct manufacturer - Step 4: Select computers on Category dropdown
+[INFO ] [2022-02-24 16:29:31,515] Avanced search with correct manufacturer - Step 5: check to Automatically search sub categories
+[INFO ] [2022-02-24 16:29:31,585] Avanced search with correct manufacturer - Step 6: Select apple on manufracturer dropdown
+[INFO ] [2022-02-24 16:29:31,807] Avanced search with correct manufacturer - Step 7: Click to search button
+[INFO ] [2022-02-24 16:29:33,475] Avanced search with correct manufacturer - Step 8: Verify 1 product appear
+[INFO ] [2022-02-24 16:29:33,623]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:33,722] Avanced search with correct manufacturer - Step 9: Verify name of the product
+[INFO ] [2022-02-24 16:29:33,845]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:40,577] Before testing - step 1: Open Open Home Page
+[INFO ] [2022-02-24 16:29:40,577] Before testing - step 2: Click to computers page
+[INFO ] [2022-02-24 16:29:45,159] Before testing - step 3: Click to notebooks link
+[INFO ] [2022-02-24 16:29:47,182] Sort with name from A to Z - Step 1: Choose Name: A-Z on sort by dropdown
+[INFO ] [2022-02-24 16:29:47,749] Sort with name from A to Z - Step 2: Verify is product name sort in A - Z order
+[INFO ] [2022-02-24 16:29:47,928]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:47,933] Sort with name from Z to A - Step 1: Choose Name: Z-A on sort by dropdown
+[INFO ] [2022-02-24 16:29:49,001] Sort with name from Z to A - Step 2: Verify is product name sort in Z - A order
+[INFO ] [2022-02-24 16:29:49,007] Sort with price low to high - Step 1: Choose Price: Low to High on sort by dropdown
+[INFO ] [2022-02-24 16:29:50,416] Sort with price low to high - Step 2: Verify is product name sort in A - Z order
+[INFO ] [2022-02-24 16:29:50,948]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:29:50,957] Sort with price high to low - Step 1: Choose Price: high to low on sort by dropdown
+[INFO ] [2022-02-24 16:29:59,841] Sort with price high to low - Step 2: Verify is product name sort in A - Z order
+[INFO ] [2022-02-24 16:30:00,696]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:00,702] Display with 3 product per page - Step 1: Select 3 on display dropdown
+[INFO ] [2022-02-24 16:30:02,505] Display with 3 product per page - Step 2: Verify only 3 or less than 3 product displayed
+[INFO ] [2022-02-24 16:30:02,848]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:02,848] Display with 3 product per page - Step 3: Verify is current page is page 1
+[INFO ] [2022-02-24 16:30:03,035]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:03,035] Display with 3 product per page - Step 4: Verify is next icon appeard at page 1
+[INFO ] [2022-02-24 16:30:03,069]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:03,070] Display with 3 product per page - Step 5: Click to next page icon
+[INFO ] [2022-02-24 16:30:04,190] Display with 3 product per page - Step 6: Verify is current page is page 2
+[INFO ] [2022-02-24 16:30:04,287]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:04,287] Display with 3 product per page - Step 7: Verify is previous icon appeard at page 2
+[INFO ] [2022-02-24 16:30:04,323]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:04,328] Display with 6 product per page - Step 1: Select 6 on display dropdown
+[INFO ] [2022-02-24 16:30:05,630] Display with 6 product per page - Step 2: Verify only 6 or less than 6 product displayed
+[INFO ] [2022-02-24 16:30:05,720]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:05,720] Display with 6 product per page - Step 3: Verify paging not displayed
+[INFO ] [2022-02-24 16:30:15,748]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:25,859]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:25,865] Display with 9 product per page - Step 1: Select 9 on display dropdown
+[INFO ] [2022-02-24 16:30:26,457] Display with 9 product per page - Step 2: Verify only 9 or less than 9 product displayed
+[INFO ] [2022-02-24 16:30:26,504]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:26,504] Display with 9 product per page - Step 3: Verify paging not displayed
+[INFO ] [2022-02-24 16:30:36,553]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:46,571]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:30:52,728] Before testing - Step 01: Open Home Page
+[INFO ] [2022-02-24 16:30:52,729] Before testing - Step 02: Open Register Page
+[INFO ] [2022-02-24 16:30:55,504] Register valid data - Step 01: Refresh the current page
+[INFO ] [2022-02-24 16:30:55,521] Register valid data - Step 02: Enter to all validation field with valid data 
+[INFO ] [2022-02-24 16:31:04,695] Register valid data - Step 03: Click on register button
+[INFO ] [2022-02-24 16:31:08,392] Register valid data - Step 05: Verify register successfull
+[INFO ] [2022-02-24 16:31:08,654]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:31:16,906] Register - Step 1: Open home Page
+[INFO ] [2022-02-24 16:31:16,906] Before testing - Step 2: Login an account
+[INFO ] [2022-02-24 16:31:25,365] Add to wishlist - step 1: Open product
+[INFO ] [2022-02-24 16:31:33,124] Add to wishlist - step 2: Click to add to wishlist button
+[INFO ] [2022-02-24 16:31:34,117] Add to wishlist - step 3: Verify message in notification bar
+[INFO ] [2022-02-24 16:31:34,913]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:31:34,914] Add to wishlist - step 4: Click close button on notification bar
+[INFO ] [2022-02-24 16:31:37,546] Add to wishlist - step 5: Click to WishList page
+[INFO ] [2022-02-24 16:31:39,534] Add to wishlist - step 6: Verify product has been add to wishlist
+[INFO ] [2022-02-24 16:31:39,695]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:31:39,695] Add to wishlist - step 7: Click to URL sharing link
+[INFO ] [2022-02-24 16:31:42,053] Add to wishlist - step 8: Verify page title text
+[INFO ] [2022-02-24 16:31:42,534]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:31:42,540] Add to cart - step 1: Return to homepage
+[INFO ] [2022-02-24 16:31:43,708] Add to cart - step 2: Click to wishlist page
+[INFO ] [2022-02-24 16:31:45,471] Add to cart - step 3: Check to add to cart check box
+[INFO ] [2022-02-24 16:31:45,678] Add to cart - step 4: Click add to cart button
+[INFO ] [2022-02-24 16:31:48,028] Add to cart - step 5: click to wishlist page
+[INFO ] [2022-02-24 16:31:49,476] Add to cart - step 6: Verify is product removed from wishlist
+[INFO ] [2022-02-24 16:31:59,563]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:31:59,564] Add to cart - step 7: Click to shopping cart
+[INFO ] [2022-02-24 16:32:01,107] Add to cart - step 8: Verify is product added to shopping cart
+[INFO ] [2022-02-24 16:32:01,128]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:01,135] Remove product in wishlist - step 1: Return to homepage
+[INFO ] [2022-02-24 16:32:02,993] Remove product in wishlist - step 2: Open product
+[INFO ] [2022-02-24 16:32:07,310] Remove product in wishlist - step 3: Click to add to wishlist button
+[INFO ] [2022-02-24 16:32:09,300] Remove product in wishlist - step 4: Verify message in notification bar
+[INFO ] [2022-02-24 16:32:09,743]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:09,744] Remove product in wishlist - step 5: Click close button on notification bar
+[INFO ] [2022-02-24 16:32:10,395] Remove product in wishlist - step 6: Click to WishList page
+[INFO ] [2022-02-24 16:32:11,931] Remove product in wishlist - step 7: Click to remove button
+[INFO ] [2022-02-24 16:32:15,307] Remove product in wishlist - step 8: Verify message in page body
+[INFO ] [2022-02-24 16:32:16,283]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:16,283] Remove product in wishlist - step 9: Verify no product displayed in wishlist
+[INFO ] [2022-02-24 16:32:26,745]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:26,752] Add product to compare - step 1: Return to homepage
+[INFO ] [2022-02-24 16:32:28,381] Add product to compare - step 2: Click to compare button of the first product
+[INFO ] [2022-02-24 16:32:29,456] Add product to compare - step 3: Verify message in notification bar
+[INFO ] [2022-02-24 16:32:30,799]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:30,799] Add product to compare - step 4: Click close button on notification bar
+[INFO ] [2022-02-24 16:32:31,786] Add product to compare - step 5: Click to compare button of the second product
+[INFO ] [2022-02-24 16:32:32,547] Add product to compare - step 6: Verify message in notification bar
+[INFO ] [2022-02-24 16:32:33,018]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:33,018] Add product to compare - step 7: Click close button on notification bar
+[INFO ] [2022-02-24 16:32:33,849] Add product to compare - step 8: Click to compare product list link
+[INFO ] [2022-02-24 16:32:38,483] Add product to compare - step 9: Verify are two remove buttons displayed
+[INFO ] [2022-02-24 16:32:39,036]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:39,036] Add product to compare - step 10: Verify name of products
+[INFO ] [2022-02-24 16:32:39,704]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:32:39,716] Recently view product - step 1: Return to homepage
+[INFO ] [2022-02-24 16:32:41,394] Recently view product - step 2: Click to computers page
+[INFO ] [2022-02-24 16:32:45,574] Recently view product - step 3: Click to notebooks link
+[INFO ] [2022-02-24 16:32:50,709] Recently view product - step 4: View first product
+[INFO ] [2022-02-24 16:33:08,481] Recently view product - step 5: View second product
+[INFO ] [2022-02-24 16:33:16,116] Recently view product - step 6: View 3th product
+[INFO ] [2022-02-24 16:33:28,366] Recently view product - step 7: View 4th product
+[INFO ] [2022-02-24 16:33:34,873] Recently view product - step 8: View 5th product
+[INFO ] [2022-02-24 16:33:40,360] Recently view product - step 9: Click to recently view product link
+[INFO ] [2022-02-24 16:33:44,492]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-02-24 16:33:57,870] Before testing - Step 1: Get admin page
+[INFO ] [2022-02-24 16:33:57,872] Before testing - Step 2: Login
+[INFO ] [2022-02-24 16:34:11,628] Before testing - Step 3: Open catalog > product
+[INFO ] [2022-02-24 16:34:20,249] Before testing - Step 4: Click to search
+[INFO ] [2022-02-24 16:34:20,881] Search with product name - Step 1: Enter data to product name
+[INFO ] [2022-02-24 16:34:22,649] Search with product name - Step 2: Click search button
+[INFO ] [2022-02-24 16:34:23,827] Search with product name - Step 3: Verify number of item apear in table
+[INFO ] [2022-02-24 16:34:33,900] Search with product name - Step 4: Verify product information
+[INFO ] [2022-02-24 16:34:36,085] Search with category unchecked - Step 1: Enter to product name
+[INFO ] [2022-02-24 16:34:36,974] Search with category unchecked - Step 2: Select computers in category
+[INFO ] [2022-02-24 16:34:37,162] Search with category unchecked - Step 3: uncheck to search with sub-category
+[INFO ] [2022-02-24 16:34:37,237] Search with category unchecked - Step 4: Click search button
+[INFO ] [2022-02-24 16:34:38,372] Search with category unchecked - Step 5: Verify no data appeared
+[INFO ] [2022-02-24 16:34:40,892] Search with category checked - Step 1: Enter to product name
+[INFO ] [2022-02-24 16:34:42,363] Search with category checked - Step 2: Select computers in category
+[INFO ] [2022-02-24 16:34:42,479] Search with category checked - Step 3: check to search with sub-category
+[INFO ] [2022-02-24 16:34:42,731] Search with category checked - Step 4: Click search button
+[INFO ] [2022-02-24 16:34:43,857] Search with category checked - Step 5: Verify 1 data appeared
+[INFO ] [2022-02-24 16:34:56,036] Search with child category - Step 1: Enter to product name
+[INFO ] [2022-02-24 16:34:57,384] Search with child category - Step 2: Select Computers >> Desktops  in category
+[INFO ] [2022-02-24 16:34:57,734] Search with child category - Step 3: uncheck to search with sub-category
+[INFO ] [2022-02-24 16:34:57,911] Search with child category - Step 4: Click search button
+[INFO ] [2022-02-24 16:34:59,196] Search with category unchecked - Step 5: Verify 1 data appeared
+[INFO ] [2022-02-24 16:35:11,756] Search with manufacturer - Step 1: Enter to product name
+[INFO ] [2022-02-24 16:35:12,823] Search with manufacturer - Step 2: Select All  in category
+[INFO ] [2022-02-24 16:35:13,015] Search with manufacturer - Step 3: uncheck to search with sub-category
+[INFO ] [2022-02-24 16:35:13,087] Search with manufacturer - Step 4: Select Apple in manufacturer
+[INFO ] [2022-02-24 16:35:13,389] Search with manufacturer - Step 5: Click search button
+[INFO ] [2022-02-24 16:35:14,410] Search with manufacturer - Step 6: Verify no data appeared
+[INFO ] [2022-02-24 16:35:16,501] Directly to product SKU - Step 1: Enter to SKU
+[INFO ] [2022-02-24 16:35:17,227] Directly to product SKU - Step 2: Click go button
+[INFO ] [2022-02-24 16:35:33,395] Directly to product SKU - Step 3: Verify current page are product detail page
+[INFO ] [2022-02-24 16:35:36,845] Directly to product SKU - Step 4: Verify product name
+[INFO ] [2022-02-24 16:35:36,943] Create new customer - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:35:42,799] Create new customer - Step 2: Click add new
+[INFO ] [2022-02-24 16:35:55,518] Create new customer - Step 3: Enter customers data
+[INFO ] [2022-02-24 16:36:04,608] Create new customer - Step 4: Click save and continue button
+[INFO ] [2022-02-24 16:36:15,673] Create new customer - Step 5: Verify success message
+[INFO ] [2022-02-24 16:36:18,067] Create new customer - Step 6: Verify all information
+[INFO ] [2022-02-24 16:36:18,506] Create new customer - Step 7: Click back to customer list
+[INFO ] [2022-02-24 16:36:20,309] Create new customer - Step 8: Select guests on customers role
+[INFO ] [2022-02-24 16:36:23,902] Create new customer - Step 9: Click search button
+[INFO ] [2022-02-24 16:36:25,310] Search customer email - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:36:27,163] Search customer email - Step 2: Enter to email
+[INFO ] [2022-02-24 16:36:28,934] Search customer email - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:36:31,635] Search customer email - Step 4: Click search button
+[INFO ] [2022-02-24 16:36:32,617] Search customer email - Step 5: Verify infomation appeared
+[INFO ] [2022-02-24 16:36:34,754] Search customer email - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:36:36,143] Search customer email - Step 2: Enter to first name and last name
+[INFO ] [2022-02-24 16:36:38,262] Search customer email - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:36:40,899] Search customer email - Step 4: Click search button
+[INFO ] [2022-02-24 16:36:41,851] Search customer email - Step 5: Verify infomation appeared
+[INFO ] [2022-02-24 16:36:43,962] Search customer email - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:36:45,764] Search customer email - Step 2: Enter to first name and last name
+[INFO ] [2022-02-24 16:36:47,160] Search customer email - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:36:49,746] Search customer email - Step 4: Click search button
+[INFO ] [2022-02-24 16:36:51,153] Search customer email - Step 5: Verify infomation appeared
+[INFO ] [2022-02-24 16:36:53,280] Search customer email - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:36:54,945] Search customer email - Step 2: Enter to all data
+[INFO ] [2022-02-24 16:36:58,936] Search customer email - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:37:01,619] Search customer email - Step 4: Click search button
+[INFO ] [2022-02-24 16:37:02,743] Search customer email - Step 5: Verify infomation appeared
+[INFO ] [2022-02-24 16:37:04,840] Edit customer - Step 1: click edit button
+[INFO ] [2022-02-24 16:37:08,798] Edit customer - Step 2: Edit all data
+[INFO ] [2022-02-24 16:37:16,385] Edit customer - Step 3: Click save and continue button
+[INFO ] [2022-02-24 16:37:18,478] Edit customer - Step 4: Verify success message
+[INFO ] [2022-02-24 16:37:19,862] Edit customer - Step 5: Verify all information
+[INFO ] [2022-02-24 16:37:20,620] Add new address - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:37:22,603] Add new address - Step 2: Search data
+[INFO ] [2022-02-24 16:37:27,168] Add new address - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:37:30,012] Add new address - Step 4: Click search button
+[INFO ] [2022-02-24 16:37:31,167] Add new address - Step 5: Click edit button
+[INFO ] [2022-02-24 16:37:35,533] Add new address - Step 6: Click address button
+[INFO ] [2022-02-24 16:37:50,056] Add new address - Step 7: Enter address data 
+[INFO ] [2022-02-24 16:38:01,399] Add new address - Step 8: Click save button
+[INFO ] [2022-02-24 16:38:09,416] Add new address - Step 9: Verify success message 
+[INFO ] [2022-02-24 16:38:10,623] Add new address - Step 10: Verify all data
+[INFO ] [2022-02-24 16:38:28,767] Add new address - Step 11: Click back to customer details 
+[INFO ] [2022-02-24 16:38:30,956] Add new address - Step 12: Verify data  
+[INFO ] [2022-02-24 16:38:33,811] Edit address - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:38:36,484] Edit address - Step 2: Search data
+[INFO ] [2022-02-24 16:38:44,618] Edit address - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:38:46,906] Edit address - Step 4: Click search button
+[INFO ] [2022-02-24 16:38:47,899] Edit address - Step 5: Click edit button
+[INFO ] [2022-02-24 16:38:52,177] Edit address - Step 6: Click edit address button
+[INFO ] [2022-02-24 16:38:58,003] Edit address - Step 7: Edit address data 
+[INFO ] [2022-02-24 16:39:06,301] Edit address address - Step 8: Click save button
+[INFO ] [2022-02-24 16:39:09,722] Edit address address - Step 9: Verify success message 
+[INFO ] [2022-02-24 16:39:10,242] Edit address address - Step 10: Verify all data
+[INFO ] [2022-02-24 16:39:17,079] Edit address address - Step 11: Click back to customer details 
+[INFO ] [2022-02-24 16:39:20,023] Edit address address - Step 12: Verify data  
+[INFO ] [2022-02-24 16:39:23,404] Delete address - Step 1: Open Customers page
+[INFO ] [2022-02-24 16:39:25,305] Delete address - Step 2: Search data
+[INFO ] [2022-02-24 16:39:29,977] Delete address - Step 3: Select Guest on customer role
+[INFO ] [2022-02-24 16:39:32,662] Delete address - Step 4: Click search button
+[INFO ] [2022-02-24 16:39:33,665] Delete address - Step 5: Click edit button
+[INFO ] [2022-02-24 16:39:38,633] Delete address - Step 6: Click delete address button
+[INFO ] [2022-02-24 16:39:42,496] Delete address - Step 7: Accept alert
+[INFO ] [2022-02-24 16:39:42,501] Delete address - Step 8: Verify no address data left 

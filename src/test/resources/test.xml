@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Nop commerce" parallel="false">
+
+	<suite-files>
+    <suite-file path="LoginTestCase.xml"></suite-file>
+    <suite-file path="MyAccountTestCase.xml"></suite-file>
+    <suite-file path="OrderTestCase.xml"></suite-file>
+    <suite-file path="RegisterTestCase.xml"></suite-file>
+    <suite-file path="SearchTestCase.xml"></suite-file>
+    <suite-file path="OrderTestCase.xml"></suite-file>
+</suite-files>
+</suite>
+	
