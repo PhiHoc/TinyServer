@@ -1,7 +1,7 @@
 package pageUIs.nopCommerce;
 
 public class ComputersPUI {
-	public static final String NOTEBOOKS_LINK = "//ul[@class='sublist']//a[contains(text(),'Notebooks')]";
+	public static final String DYNAMIC_LINK = "//ul[@class='sublist']//a[contains(text(),'%s')]";
 	
 	public static final String DESKTOP_LINK = "//ul[@class='sublist']//a[contains(text(),'Desktops ')]";
 	

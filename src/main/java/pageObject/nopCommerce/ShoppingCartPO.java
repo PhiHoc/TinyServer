@@ -2,8 +2,6 @@ package pageObject.nopCommerce;
 
 import org.openqa.selenium.WebDriver;
 
-import com.nopcommerce.data.Data;
-
 import commons.BasePage;
 import pageUIs.nopCommerce.ShopppingCartPUI;
 
@@ -64,14 +62,14 @@ public class ShoppingCartPO extends BasePage {
 		clickToElement(driver, ShopppingCartPUI.UPDATE_SHOPPING_CART_BUTTON);
 	}
 
-	public void selectShippingAddressCountryDropDown() {
+	public void selectShippingAddressCountryDropDownByText(String country) {
 		waitForElementVisible(driver, ShopppingCartPUI.ESTIMATE_SHIPPING_COUNTRY_DROPDOWN);
-		selectDropdownByText(driver, ShopppingCartPUI.ESTIMATE_SHIPPING_COUNTRY_DROPDOWN, Data.AddressesData.ADDRESS_COUNTRY);
+		selectDropdownByText(driver, ShopppingCartPUI.ESTIMATE_SHIPPING_COUNTRY_DROPDOWN, country);
 	}
 
-	public void enterToShippingAddressZipPostalCode() {
+	public void enterToShippingAddressZipPostalCode(String zip) {
 		waitForElementVisible(driver, ShopppingCartPUI.ZIP_POSTAL_CODE_TEXTBOX);
-		sendkeysToElement(driver, ShopppingCartPUI.ZIP_POSTAL_CODE_TEXTBOX, Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE);
+		sendkeysToElement(driver, ShopppingCartPUI.ZIP_POSTAL_CODE_TEXTBOX, zip);
 	}
 	
 	public void waitForShippingMethodAppear() {

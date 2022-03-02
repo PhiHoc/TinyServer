@@ -13,14 +13,9 @@ public class ComputersPO extends BasePage {
 		this.driver = driver;
 	}
 
-	public void clickToNoteBooksLink() {
-		waitForElementVisible(driver, ComputersPUI.NOTEBOOKS_LINK);
-		clickToElement(driver, ComputersPUI.NOTEBOOKS_LINK);
-	}
-
-	public void clickToDesktopLink() {
-		waitForElementVisible(driver, ComputersPUI.DESKTOP_LINK);
-		clickToElement(driver, ComputersPUI.DESKTOP_LINK);
+	public void clickToSublistLinkByName(String name) {
+		waitForElementVisible(driver, ComputersPUI.DYNAMIC_LINK,name);
+		clickToElement(driver, ComputersPUI.DYNAMIC_LINK,name);
 	}
 
 	public void selectSortByDropDownByText(String text) {

@@ -13,13 +13,13 @@ public class LoginPO extends BasePage {
 		this.driver = driver;
 	}
 
-	public void enterToEmail(String email)
+	public void enterToEmailTextbox(String email)
 	{
 		waitForElementVisible(driver, LoginPUI.EMAIL_TEXTBOX);
 		sendkeysToElement(driver, LoginPUI.EMAIL_TEXTBOX,email);
 	}
 
-	public void enterToPassword(String password) {
+	public void enterToPasswordTextbox(String password) {
 		waitForElementVisible(driver, LoginPUI.PASSWORD_TEXTBOX);
 		sendkeysToElement(driver, LoginPUI.PASSWORD_TEXTBOX, password);
 	}
@@ -40,8 +40,8 @@ public class LoginPO extends BasePage {
 	}
 
 	public void loginWithData(String email, String pass) {
-			enterToEmail(email);
-			enterToPassword(pass);
+			enterToEmailTextbox(email);
+			enterToPasswordTextbox(pass);
 			clickToLoginButton();
 	}
 

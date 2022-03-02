@@ -29,7 +29,7 @@ public class SortTabTest extends BaseTest {
 		computersPO = userHomePO.clickToComputersPage();
 		
 		log.info("Before testing - step 3: Click to notebooks link");
-		computersPO.clickToNoteBooksLink();
+		computersPO.clickToSublistLinkByName("Notebooks");
 	}
 	
 	@Test

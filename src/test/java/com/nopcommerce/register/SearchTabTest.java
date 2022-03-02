@@ -36,7 +36,7 @@ public class SearchTabTest extends BaseTest {
 	public void TC_01_Search_With_Empty_Data() {
 		
 		log.info("Search with empty data - Step 1: Enter to search keyword with empty data");
-		searchPO.enterToSearchKeyWord("");
+		searchPO.enterToSearchKeyWordTextBox("");
 		
 		log.info("Search with empty data - Step 2: Click to search button");
 		searchPO.clickToSearchButton();
@@ -49,7 +49,7 @@ public class SearchTabTest extends BaseTest {
 	public void TC_02_Search_With_Not_Exist_Data() {
 		
 		log.info("Search with not exist data - Step 1: Enter to search keyword with not exist data");
-		searchPO.enterToSearchKeyWord("Macbook Pro 2050");
+		searchPO.enterToSearchKeyWordTextBox("Macbook Pro 2050");
 		
 		log.info("Search with not exist data - Step 2: Click to search button");
 		searchPO.clickToSearchButton();
@@ -61,88 +61,88 @@ public class SearchTabTest extends BaseTest {
 	@Test
 	public void TC_03_Search_With_Relative_Product_Name() {
 		
-		log.info("Search with relative product name - Step 2: Search with keyword Lenovo");
-		searchPO.enterToSearchKeyWord("Lenovo");
+		log.info("Search with relative product name - Step 1: Search with keyword Lenovo");
+		searchPO.enterToSearchKeyWordTextBox("Lenovo");
 		
-		log.info("Search with relative product name - Step 3: Click to search button");
+		log.info("Search with relative product name - Step 2: Click to search button");
 		searchPO.clickToSearchButton();
 		
-		log.info("Search with relative product name - Step 4: Verify is 2 lenovo product appear");
+		log.info("Search with relative product name - Step 3: Verify is 2 lenovo product appear");
 		verifyEquals(searchPO.numberOfProductAppear(),2);
 		
 		List<WebElement> productList = searchPO.getListOfProductsAppeared();
 		
-		log.info("Search with relative product name - Step 5: Verify name of the first lenovo product");
+		log.info("Search with relative product name - Step 4: Verify name of the first lenovo product");
 		verifyEquals(productList.get(0).getText(),"Lenovo IdeaCentre 600 All-in-One PC");
 		
-		log.info("Search with relative product name - Step 6: Verify name of the second lenovo product");
+		log.info("Search with relative product name - Step 5: Verify name of the second lenovo product");
 		verifyEquals(productList.get(1).getText(),"Lenovo Thinkpad X1 Carbon Laptop");
 	}
 	
 	@Test
 	public void TC_04_Search_With_Absolute_Product_Name() {
 		
-		log.info("Search with absolute product name - Step 2: Search with keyword ThinkPad X1 Carbon");
-		searchPO.enterToSearchKeyWord("ThinkPad X1 Carbon");
+		log.info("Search with absolute product name - Step 1: Search with keyword ThinkPad X1 Carbon");
+		searchPO.enterToSearchKeyWordTextBox("ThinkPad X1 Carbon");
 		
-		log.info("Search with absolute product name - Step 3: Click to search button");
+		log.info("Search with absolute product name - Step 2: Click to search button");
 		searchPO.clickToSearchButton();
 		
-		log.info("Search with absolute product name - Step 4: Verify is only 1 product appear");
+		log.info("Search with absolute product name - Step 3: Verify is only 1 product appear");
 		verifyEquals(searchPO.numberOfProductAppear(),1);
 		
 		List<WebElement> productList = searchPO.getListOfProductsAppeared();
 		
-		log.info("Search with absolute product name - Step 5: Verify name of the product");
+		log.info("Search with absolute product name - Step 4: Verify name of the product");
 		verifyEquals(productList.get(0).getText(),"Lenovo Thinkpad X1 Carbon Laptop");
 	}
 	
 	@Test
 	public void TC_05_Avanced_Search_With_Parent_Categories() {
 		
-		log.info("Avanced search with parent categories - Step 2: Search with keyword Apple MacBook Pro");
-		searchPO.enterToSearchKeyWord("Apple MacBook Pro");
+		log.info("Avanced search with parent categories - Step 1: Search with keyword Apple MacBook Pro");
+		searchPO.enterToSearchKeyWordTextBox("Apple MacBook Pro");
 		
-		log.info("Avanced search with parent categories - Step 3: Check to advanced search");
+		log.info("Avanced search with parent categories - Step 2: Check to advanced search");
 		searchPO.checkToAdvancedSearch();
 		
-		log.info("Avanced search with parent categories - Step 4: Select computers on Category dropdown");
+		log.info("Avanced search with parent categories - Step 3: Select computers on Category dropdown");
 		searchPO.selectCategoryDropDown("Computers");
 		
-		log.info("Avanced search with parent categories - Step 5: uncheck to Automatically search sub categories");
+		log.info("Avanced search with parent categories - Step 4: uncheck to Automatically search sub categories");
 		searchPO.uncheckToAutomaticallySearchSubCategories();
 		
-		log.info("Avanced search with parent categories - Step 6: Click to search button");
+		log.info("Avanced search with parent categories - Step 5: Click to search button");
 		searchPO.clickToSearchButton();
 		
-		log.info("Avanced search with parent categories - Step 7: Verify error message");
+		log.info("Avanced search with parent categories - Step 6: Verify error message");
 		verifyEquals(searchPO.getSearchErrorMessage(), "No products were found that matched your criteria.");
 	}
 	
 	@Test
 	public void TC_06_Avanced_Search_With_Sub_Categories() {
 		
-		log.info("Avanced search with sub categories - Step 2: Search with keyword Apple MacBook Pro");
-		searchPO.enterToSearchKeyWord("Apple MacBook Pro");
+		log.info("Avanced search with sub categories - Step 1: Search with keyword Apple MacBook Pro");
+		searchPO.enterToSearchKeyWordTextBox("Apple MacBook Pro");
 		
-		log.info("Avanced search with sub categories - Step 3: Check to advanced search");
+		log.info("Avanced search with sub categories - Step 2: Check to advanced search");
 		searchPO.checkToAdvancedSearch();
 		
-		log.info("Avanced search with sub categories - Step 4: Select computers on Category dropdown");
+		log.info("Avanced search with sub categories - Step 3: Select computers on Category dropdown");
 		searchPO.selectCategoryDropDown("Computers");
 		
-		log.info("Avanced search with sub categories - Step 5: check to Automatically search sub categories");
+		log.info("Avanced search with sub categories - Step 4: check to Automatically search sub categories");
 		searchPO.checkToAutomaticallySearchSubCategories();
 		
-		log.info("Avanced search with sub categories - Step 6: Click to search button");
+		log.info("Avanced search with sub categories - Step 5: Click to search button");
 		searchPO.clickToSearchButton();
 		
-		log.info("Avanced search with sub categories - Step 7: Verify 1 product appear");
+		log.info("Avanced search with sub categories - Step 6: Verify 1 product appear");
 		verifyEquals(searchPO.numberOfProductAppear(),1);
 		
 		List<WebElement> productList = searchPO.getListOfProductsAppeared();
 		
-		log.info("Avanced search with sub categories - Step 8: Verify name of the product");
+		log.info("Avanced search with sub categories - Step 7: Verify name of the product");
 		verifyEquals(productList.get(0).getText(),"Apple MacBook Pro 13-inch");
 	}
 	
@@ -150,7 +150,7 @@ public class SearchTabTest extends BaseTest {
 	public void TC_07_Avanced_Search_With_Incorrect_Manufacturer() {
 		
 		log.info("Avanced search with incorrect manufacturer - Step 2: Search with keyword Apple MacBook Pro");
-		searchPO.enterToSearchKeyWord("Apple MacBook Pro");
+		searchPO.enterToSearchKeyWordTextBox("Apple MacBook Pro");
 		
 		log.info("Avanced search with incorrect manufacturer - Step 3: Check to advanced search");
 		searchPO.checkToAdvancedSearch();
@@ -175,7 +175,7 @@ public class SearchTabTest extends BaseTest {
 	public void TC_08_Avanced_Search_With_Correct_Manufacturer() {
 		
 		log.info("Avanced search with correct manufacturer - Step 2: Search with keyword Apple MacBook Pro");
-		searchPO.enterToSearchKeyWord("Apple MacBook Pro");
+		searchPO.enterToSearchKeyWordTextBox("Apple MacBook Pro");
 		
 		log.info("Avanced search with correct manufacturer - Step 3: Check to advanced search");
 		searchPO.checkToAdvancedSearch();

@@ -13,8 +13,8 @@ public class CompareProductListPO extends BasePage {
 		this.driver = driver;
 	}
 
-	public boolean areTwoRemoveButtonsDisplayed() {
-		return countElementSize(driver, CompareProductListPUI.REMOVE_BUTTON) == 2;
+	public int getNumberOfRemoveButtonsDisplayed() {
+		return countElementSize(driver, CompareProductListPUI.REMOVE_BUTTON);
 	}
 
 	public String getNameProductInCompareTable() {

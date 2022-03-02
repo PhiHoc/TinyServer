@@ -53,8 +53,8 @@ public class UserHomePO extends BasePage {
 	}
 
 	public void clickToProductByName(String name) {
-		waitForElementClickable(driver, UserHomePageUI.PRODUCT_TITLE_LINK, name);
-		clickToElement(driver, UserHomePageUI.PRODUCT_TITLE_LINK, name);
+		waitForElementClickable(driver, UserHomePageUI.DYNAMIC_PRODUCT_TITLE_LINK, name);
+		clickToElement(driver, UserHomePageUI.DYNAMIC_PRODUCT_TITLE_LINK, name);
 	}
 
 	public ReviewPO clickToAddYourReviewPage() {

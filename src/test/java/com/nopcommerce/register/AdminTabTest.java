@@ -35,8 +35,8 @@ public class AdminTabTest extends BaseTest {
 		adminPO.clickLoginButton();
 
 		log.info("Before testing - Step 3: Open catalog > product");
-		adminPO.clickToCatalog();
-		adminPO.clickToProduct();
+		adminPO.clickToCatalogMenu();
+		adminPO.clickToProductsSubMenu();
 
 		log.info("Before testing - Step 4: Click to search");
 		adminPO.clickToSearchIcon();
@@ -47,10 +47,10 @@ public class AdminTabTest extends BaseTest {
 	public void TC_01_Search_With_Product_Name() {
 
 		log.info("Search with product name - Step 1: Enter data to product name");
-		adminPO.enterToProductName("Lenovo IdeaCentre 600 All-in-One PC");
+		adminPO.enterToProductNameTextBox("Lenovo IdeaCentre 600 All-in-One PC");
 
 		log.info("Search with product name - Step 2: Click search button");
-		adminPO.clickToSearchProductButton();
+		adminPO.clickToSearchButtonAtProducts();
 
 		log.info("Search with product name - Step 3: Verify number of item apear in table");
 		assertEquals(adminPO.getNumberOfItemAppear(), 1);
@@ -62,7 +62,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_02_Search_With_Product_Name_Parent_Category_Unchecked() {
 		log.info("Search with category unchecked - Step 1: Enter to product name");
-		adminPO.enterToProductName("Lenovo IdeaCentre 600 All-in-One PC");
+		adminPO.enterToProductNameTextBox("Lenovo IdeaCentre 600 All-in-One PC");
 
 		log.info("Search with category unchecked - Step 2: Select computers in category");
 		adminPO.selectCategoryByText("Computers");
@@ -71,7 +71,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.uncheckToSubCategory();
 
 		log.info("Search with category unchecked - Step 4: Click search button");
-		adminPO.clickToSearchProductButton();
+		adminPO.clickToSearchButtonAtProducts();
 
 		log.info("Search with category unchecked - Step 5: Verify no data appeared");
 		assertEquals(adminPO.getProductInfo(), "No data available in table");
@@ -80,7 +80,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_03_Search_With_Product_Name_Parent_Category_Checked() {
 		log.info("Search with category checked - Step 1: Enter to product name");
-		adminPO.enterToProductName("Lenovo IdeaCentre 600 All-in-One PC");
+		adminPO.enterToProductNameTextBox("Lenovo IdeaCentre 600 All-in-One PC");
 
 		log.info("Search with category checked - Step 2: Select computers in category");
 		adminPO.selectCategoryByText("Computers");
@@ -89,7 +89,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.checkToSubCategory();
 
 		log.info("Search with category checked - Step 4: Click search button");
-		adminPO.clickToSearchProductButton();
+		adminPO.clickToSearchButtonAtProducts();
 
 		log.info("Search with category checked - Step 5: Verify 1 data appeared");
 		assertEquals(adminPO.getNumberOfItemAppear(), 1);
@@ -99,7 +99,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_04_Search_With_Product_Name_Child_Category() {
 		log.info("Search with child category - Step 1: Enter to product name");
-		adminPO.enterToProductName("Lenovo IdeaCentre 600 All-in-One PC");
+		adminPO.enterToProductNameTextBox("Lenovo IdeaCentre 600 All-in-One PC");
 
 		log.info("Search with child category - Step 2: Select Computers >> Desktops  in category");
 		adminPO.selectCategoryByText("Computers >> Desktops");
@@ -108,7 +108,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.uncheckToSubCategory();
 
 		log.info("Search with child category - Step 4: Click search button");
-		adminPO.clickToSearchProductButton();
+		adminPO.clickToSearchButtonAtProducts();
 
 		log.info("Search with category unchecked - Step 5: Verify 1 data appeared");
 		assertEquals(adminPO.getNumberOfItemAppear(), 1);
@@ -118,7 +118,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_05_Search_With_Product_Name_Manufacturer() {
 		log.info("Search with manufacturer - Step 1: Enter to product name");
-		adminPO.enterToProductName("Lenovo IdeaCentre 600 All-in-One PC");
+		adminPO.enterToProductNameTextBox("Lenovo IdeaCentre 600 All-in-One PC");
 
 		log.info("Search with manufacturer - Step 2: Select All  in category");
 		adminPO.selectCategoryByText("All");
@@ -130,7 +130,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.selectManufacturerByText("Apple");
 
 		log.info("Search with manufacturer - Step 5: Click search button");
-		adminPO.clickToSearchProductButton();
+		adminPO.clickToSearchButtonAtProducts();
 
 		log.info("Search with manufacturer - Step 6: Verify no data appeared");
 		assertEquals(adminPO.getProductInfo(), "No data available in table");
@@ -139,7 +139,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_06_Go_Directly_To_Product_SKU() {
 		log.info("Directly to product SKU - Step 1: Enter to SKU");
-		adminPO.enterToProductSKU("LE_IC_600");
+		adminPO.enterToProductSKUTextBox("LE_IC_600");
 
 		log.info("Directly to product SKU - Step 2: Click go button");
 		adminPO.clickGoButton();
@@ -154,8 +154,8 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_07_Create_New_Customer() {
 		log.info("Create new customer - Step 1: Open Customers page");
-		adminPO.clickToCustomers();
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersMenu();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Create new customer - Step 2: Click add new");
 		adminPO.clickToAddNewButton();
@@ -187,22 +187,22 @@ public class AdminTabTest extends BaseTest {
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Create new customer - Step 9: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 	}
 
 	@Test
 	public void TC_08_Search_Customer_With_Email() {
 		log.info("Search customer email - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Search customer email - Step 2: Enter to email");
-		adminPO.enterToCustomerSearchEmail(email);
+		adminPO.enterToCustomerEmailTextBox(email);
 
 		log.info("Search customer email - Step 3: Select Guest on customer role");
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Search customer email - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Search customer email - Step 5: Verify infomation appeared");
 		assertEquals(adminPO.getProductInfo(), "Guest Automation FC Guests Automation FC");
@@ -211,7 +211,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_09_Search_Customer_With_First_Name_Last_Name() {
 		log.info("Search customer email - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Search customer email - Step 2: Enter to first name and last name");
 		adminPO.enterToCustomerFirstName(AddressesData.ADDRESS_FIRST_NAME);
@@ -221,7 +221,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Search customer email - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Search customer email - Step 5: Verify infomation appeared");
 		assertEquals(adminPO.getProductInfo(), "Guest Automation FC Guests Automation FC");
@@ -230,7 +230,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_10_Search_Customer_With_Company_Name() {
 		log.info("Search customer email - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Search customer email - Step 2: Enter to first name and last name");
 		adminPO.enterToCustomerCompany(AddressesData.ADDRESS_COMPANY_NAME);
@@ -239,7 +239,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Search customer email - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Search customer email - Step 5: Verify infomation appeared");
 		assertEquals(adminPO.getProductInfo(), "Guest Automation FC Guests Automation FC");
@@ -248,7 +248,7 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_11_Search_Customer_With_Full_Data() {
 		log.info("Search customer email - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Search customer email - Step 2: Enter to all data");
 		adminPO.enterToCustomerSearchData(AddressesData.ADDRESS_FIRST_NAME, AddressesData.ADDRESS_LAST_NAME, email,
@@ -258,7 +258,7 @@ public class AdminTabTest extends BaseTest {
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Search customer email - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Search customer email - Step 5: Verify infomation appeared");
 		assertEquals(adminPO.getProductInfo(), "Guest Automation FC Guests Automation FC");
@@ -271,8 +271,12 @@ public class AdminTabTest extends BaseTest {
 
 		log.info("Edit customer - Step 2: Edit all data");
 		email = Data.getRandomEmail();
-		adminPO.enterCustomerData("Edit" + AddressesData.ADDRESS_FIRST_NAME, "Edit" + AddressesData.ADDRESS_LAST_NAME,
-				email, "", "2/2/2000", "Edit" + AddressesData.ADDRESS_COMPANY_NAME, "Edit customer");
+		adminPO.enterCustomerData("Edit" + AddressesData.ADDRESS_FIRST_NAME, 
+				"Edit" + AddressesData.ADDRESS_LAST_NAME,
+				email, "", 
+				"2/2/2000", 
+				"Edit" + AddressesData.ADDRESS_COMPANY_NAME, 
+				"Edit customer");
 
 		log.info("Edit customer - Step 3: Click save and continue button");
 		adminPO.clickSaveAndContinueButton();
@@ -293,17 +297,18 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_13_Add_New_Address_In_Customer_Detail() {
 		log.info("Add new address - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Add new address - Step 2: Search data");
 		adminPO.enterToCustomerSearchData("Edit" + AddressesData.ADDRESS_FIRST_NAME,
-				"Edit" + AddressesData.ADDRESS_LAST_NAME, email, "Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
+				"Edit" + AddressesData.ADDRESS_LAST_NAME, 
+				email, "Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
 
 		log.info("Add new address - Step 3: Select Guest on customer role");
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Add new address - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Add new address - Step 5: Click edit button");
 		adminPO.clickEditButton();
@@ -312,10 +317,12 @@ public class AdminTabTest extends BaseTest {
 		adminPO.clickAddNewAddressButton();
 
 		log.info("Add new address - Step 7: Enter address data ");
-		adminPO.enterToAddressData(AddressesData.ADDRESS_FIRST_NAME, AddressesData.ADDRESS_LAST_NAME,
-				AddressesData.ADDRESS_EMAIL, AddressesData.ADDRESS_COUNTRY, AddressesData.ADDRESS_CITY,
-				AddressesData.ADDRESS_1, AddressesData.ADDRESS_2, AddressesData.ADDRESS_ZIP_POSTAL_CODE,
-				AddressesData.ADDRESS_PHONE, AddressesData.ADDRESS_FAX);
+		adminPO.enterToAddressData(AddressesData.ADDRESS_FIRST_NAME, 
+				AddressesData.ADDRESS_LAST_NAME, AddressesData.ADDRESS_EMAIL, 
+				AddressesData.ADDRESS_COUNTRY, AddressesData.ADDRESS_CITY,
+				AddressesData.ADDRESS_1, AddressesData.ADDRESS_2, 
+				AddressesData.ADDRESS_ZIP_POSTAL_CODE, AddressesData.ADDRESS_PHONE, 
+				AddressesData.ADDRESS_FAX);
 
 		log.info("Add new address - Step 8: Click save button");
 		adminPO.clickSaveButton();
@@ -340,10 +347,14 @@ public class AdminTabTest extends BaseTest {
 
 		log.info("Add new address - Step 12: Verify data  ");
 		assertEquals(adminPO.getCustomerInfo(),
-				AddressesData.ADDRESS_FIRST_NAME + " " + AddressesData.ADDRESS_LAST_NAME + " "
-						+ AddressesData.ADDRESS_EMAIL + " " + AddressesData.ADDRESS_PHONE + " "
-						+ AddressesData.ADDRESS_FAX + "\n" + AddressesData.ADDRESS_1 + "\n" + AddressesData.ADDRESS_2
-						+ "\n" + AddressesData.ADDRESS_CITY + "," + AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+				AddressesData.ADDRESS_FIRST_NAME + " " 
+						+ AddressesData.ADDRESS_LAST_NAME + " "
+						+ AddressesData.ADDRESS_EMAIL + " " 
+						+ AddressesData.ADDRESS_PHONE + " "
+						+ AddressesData.ADDRESS_FAX + "\n" 
+						+ AddressesData.ADDRESS_1 + "\n" + AddressesData.ADDRESS_2
+						+ "\n" + AddressesData.ADDRESS_CITY 
+						+ "," + AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ AddressesData.ADDRESS_COUNTRY);
 
 	}
@@ -351,17 +362,18 @@ public class AdminTabTest extends BaseTest {
 	@Test
 	public void TC_14_Edit_Address_In_Customer_Detail() {
 		log.info("Edit address - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Edit address - Step 2: Search data");
 		adminPO.enterToCustomerSearchData("Edit" + AddressesData.ADDRESS_FIRST_NAME,
-				"Edit" + AddressesData.ADDRESS_LAST_NAME, email, "Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
+				"Edit" + AddressesData.ADDRESS_LAST_NAME, email, 
+				"Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
 
 		log.info("Edit address - Step 3: Select Guest on customer role");
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Edit address - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Edit address - Step 5: Click edit button");
 		adminPO.clickEditButton();
@@ -370,10 +382,16 @@ public class AdminTabTest extends BaseTest {
 		adminPO.clickAddressEditButton();
 
 		log.info("Edit address - Step 7: Edit address data ");
-		adminPO.enterToAddressData("Edit" + AddressesData.ADDRESS_FIRST_NAME, "Edit" + AddressesData.ADDRESS_LAST_NAME,
-				"Edit" + AddressesData.ADDRESS_EMAIL, AddressesData.ADDRESS_COUNTRY,
-				"Edit" + AddressesData.ADDRESS_CITY, "Edit" + AddressesData.ADDRESS_1, "Edit" + AddressesData.ADDRESS_2,
-				AddressesData.ADDRESS_ZIP_POSTAL_CODE, AddressesData.ADDRESS_PHONE, AddressesData.ADDRESS_FAX);
+		adminPO.enterToAddressData("Edit" + AddressesData.ADDRESS_FIRST_NAME, 
+				"Edit" + AddressesData.ADDRESS_LAST_NAME,
+				"Edit" + AddressesData.ADDRESS_EMAIL, 
+				AddressesData.ADDRESS_COUNTRY,
+				"Edit" + AddressesData.ADDRESS_CITY, 
+				"Edit" + AddressesData.ADDRESS_1, 
+				"Edit" + AddressesData.ADDRESS_2,
+				AddressesData.ADDRESS_ZIP_POSTAL_CODE, 
+				AddressesData.ADDRESS_PHONE, 
+				AddressesData.ADDRESS_FAX);
 
 		log.info("Edit address address - Step 8: Click save button");
 		adminPO.clickEditSaveButton();
@@ -398,27 +416,33 @@ public class AdminTabTest extends BaseTest {
 
 		log.info("Edit address address - Step 12: Verify data  ");
 		assertEquals(adminPO.getCustomerInfo(),
-				"Edit" + AddressesData.ADDRESS_FIRST_NAME + " " + "Edit" + AddressesData.ADDRESS_LAST_NAME + " "
-						+ "Edit" + AddressesData.ADDRESS_EMAIL + " " + AddressesData.ADDRESS_PHONE + " "
-						+ AddressesData.ADDRESS_FAX + "\n" + "Edit" + AddressesData.ADDRESS_1 + "\n" + "Edit"
-						+ AddressesData.ADDRESS_2 + "\n" + "Edit" + AddressesData.ADDRESS_CITY + ","
-						+ AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n" + AddressesData.ADDRESS_COUNTRY);
+				"Edit" + AddressesData.ADDRESS_FIRST_NAME + " " 
+						+ "Edit" + AddressesData.ADDRESS_LAST_NAME + " "
+						+ "Edit" + AddressesData.ADDRESS_EMAIL + " " 
+						+ AddressesData.ADDRESS_PHONE + " "
+						+ AddressesData.ADDRESS_FAX + "\n" + "Edit" 
+						+ AddressesData.ADDRESS_1 + "\n" + "Edit"
+						+ AddressesData.ADDRESS_2 + "\n" + "Edit" 
+						+ AddressesData.ADDRESS_CITY + ","
+						+ AddressesData.ADDRESS_ZIP_POSTAL_CODE 
+						+ "\n" + AddressesData.ADDRESS_COUNTRY);
 	}
 	
 	@Test
 	public void TC_15_Delete_Address_In_Customer_Detail() {
 		log.info("Delete address - Step 1: Open Customers page");
-		adminPO.clickToSubCustomers();
+		adminPO.clickToCustomersSubmenu();
 
 		log.info("Delete address - Step 2: Search data");
 		adminPO.enterToCustomerSearchData("Edit" + AddressesData.ADDRESS_FIRST_NAME,
-				"Edit" + AddressesData.ADDRESS_LAST_NAME, email, "Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
+				"Edit" + AddressesData.ADDRESS_LAST_NAME, email, 
+				"Edit" + AddressesData.ADDRESS_COMPANY_NAME, "2", "2");
 
 		log.info("Delete address - Step 3: Select Guest on customer role");
 		adminPO.selectCustomerRoleInList("Guests");
 
 		log.info("Delete address - Step 4: Click search button");
-		adminPO.clickToSearchCustomerButton();
+		adminPO.clickToSearchButtonAtCustomer();
 
 		log.info("Delete address - Step 5: Click edit button");
 		adminPO.clickEditButton();

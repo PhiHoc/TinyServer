@@ -12,7 +12,7 @@ public class UserHomePageUI {
 	
 	public static final String SEARCH_LINK = "//a[text()='Search']";
 	
-	public static final String PRODUCT_TITLE_LINK = "//h2[@class='product-title']/a[text()='%s']";
+	public static final String DYNAMIC_PRODUCT_TITLE_LINK = "//h2[@class='product-title']/a[text()='%s']";
 	
 	public static final String ADD_YOUR_REVIEW_LINK = "//a[text()='Add your review']";
 	

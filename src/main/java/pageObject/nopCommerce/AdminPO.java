@@ -18,22 +18,22 @@ public class AdminPO extends BasePage {
 		clickToElement(driver, AdminPUI.LOGIN_BUTTON);
 	}
 
-	public void clickToCatalog() {
+	public void clickToCatalogMenu() {
 		waitForElementClickable(driver, AdminPUI.CATALOG_ICON);
 		clickToElement(driver, AdminPUI.CATALOG_ICON);
 	}
 	
-	public void clickToCustomers() {
+	public void clickToCustomersMenu() {
 		waitForElementClickable(driver, AdminPUI.CUSTOMER_ICON);
 		clickToElement(driver, AdminPUI.CUSTOMER_ICON);
 	}
 	
-	public void clickToSubCustomers() {
+	public void clickToCustomersSubmenu() {
 		waitForElementClickable(driver, AdminPUI.CUSTOMER_LINK);
 		clickToElement(driver, AdminPUI.CUSTOMER_LINK);
 	}
 
-	public void clickToProduct() {
+	public void clickToProductsSubMenu() {
 		waitForElementClickable(driver, AdminPUI.PRODUCT_LINK);
 		clickToElement(driver, AdminPUI.PRODUCT_LINK);
 	}
@@ -45,7 +45,7 @@ public class AdminPO extends BasePage {
 		}
 	}
 
-	public void enterToProductName(String name) {
+	public void enterToProductNameTextBox(String name) {
 		waitForAllElementVisible(driver, AdminPUI.PRODUCT_NAME_TEXTBOX);
 		sendkeysToElement(driver, AdminPUI.PRODUCT_NAME_TEXTBOX, name);
 	}
@@ -60,7 +60,7 @@ public class AdminPO extends BasePage {
 		return getElementText(driver, AdminPUI.ODD_ITEM_INFO_FIELD).replace(" Edit", "");
 	}
 
-	public void clickToSearchProductButton() {
+	public void clickToSearchButtonAtProducts() {
 		waitForElementClickable(driver, AdminPUI.SEARCH_PRODUCT_BUTTON);
 		clickToElement(driver, AdminPUI.SEARCH_PRODUCT_BUTTON);
 		
@@ -88,7 +88,7 @@ public class AdminPO extends BasePage {
 		selectDropdownByText(driver, AdminPUI.MANUFACTURER_DROPDOWN, text);
 	}
 
-	public void enterToProductSKU(String string) {
+	public void enterToProductSKUTextBox(String string) {
 		waitForElementVisible(driver, AdminPUI.SKU_TEXTBOX);
 		sendkeysToElement(driver, AdminPUI.SKU_TEXTBOX, string);
 	}
@@ -129,7 +129,7 @@ public class AdminPO extends BasePage {
 		sendkeysToElement(driver, AdminPUI.EMAIL_TEXTBOX, email);
 	}
 	
-	public void enterToCustomerSearchEmail(String email){
+	public void enterToCustomerEmailTextBox(String email){
 		waitForElementVisible(driver, AdminPUI.CUSTOMER_SEARCH_EMAIL_TEXTBOX);
 		sendkeysToElement(driver, AdminPUI.CUSTOMER_SEARCH_EMAIL_TEXTBOX, email);
 	}
@@ -231,7 +231,7 @@ public class AdminPO extends BasePage {
 		clickToElement(driver, AdminPUI.CUSTOMER_ROLE, role);
 	}
 
-	public void clickToSearchCustomerButton() {
+	public void clickToSearchButtonAtCustomer() {
 		waitForElementClickable(driver, AdminPUI.SEARCH_CUSTOMER_BUTTON);
 		clickToElement(driver, AdminPUI.SEARCH_CUSTOMER_BUTTON);
 		
@@ -259,7 +259,7 @@ public class AdminPO extends BasePage {
 	public void enterToCustomerSearchData(String fname, String lname, String email,String company, String dobMonth, String dobDay) {
 		enterToCustomerFirstName(fname);
 		enterToCustomerLastName(lname);
-		enterToCustomerSearchEmail(email);
+		enterToCustomerEmailTextBox(email);
 		enterToCustomerCompany(company);
 		selectCustomerDOBMonth(dobMonth);
 		selectCustomerDOBDay(dobDay);

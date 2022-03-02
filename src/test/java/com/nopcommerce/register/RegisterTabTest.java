@@ -24,12 +24,13 @@ public class RegisterTabTest extends BaseTest {
 	public void beforeClass(String browserName, String appUrl) {
 		driver = getBrowserDriver(browserName, appUrl);
 		
+		log.info("Before testing - Step 01: Generate random register data");
 		Data.RegisterData.generateRandomData();
 		
-		log.info("Before testing - Step 01: Open Home Page");
+		log.info("Before testing - Step 02: Open Home Page");
 		userHomePO = PageGeneratorManager.getHomePage(driver);
 
-		log.info("Before testing - Step 02: Open Register Page");
+		log.info("Before testing - Step 03: Open Register Page");
 		registerPO = userHomePO.clickToRegisterPage();
 	}
 
@@ -37,7 +38,7 @@ public class RegisterTabTest extends BaseTest {
 	public void TC_01_Register_With_Empty_Data() {
 
 		log.info("Register - Step 01: Enter to all validation field with empty data");
-		registerPO.filterRegisterData("", "", "", "", "", "");
+		registerPO.enterToRegisterData("", "", "", "", "", "");
 
 		log.info("Register - Step 02: Click register button");
 		registerPO.clickRegisterButton();
@@ -60,28 +61,25 @@ public class RegisterTabTest extends BaseTest {
 
 	@Test
 	public void TC_02_Register_With_Invalid_Email() {
-		log.info("Register Invalid email - Step 01: Refresh the current page");
-		registerPO.refreshCurrentPage(driver);
-
-		log.info("Register Invalid email - Step 02: Enter invalid mail");
+		log.info("Register Invalid email - Step 01: Enter an invalid mail");
 		registerPO.enterToEmail("1234.com");
 
-		log.info("Register Invalid email - Step 03: Click register button");
+		log.info("Register Invalid email - Step 02: Click register button");
 		registerPO.clickRegisterButton();
 
-		log.info("Register Invalid email - Step 04: Verify error message");
+		log.info("Register Invalid email - Step 03: Verify error message");
 		verifyEquals(registerPO.getErrorMessageAtMandantoryFieldByEmail(), "Wrong email");
 	}
 
 	@Test
 	public void TC_03_Register_With_Valid_Data() {
 
-		log.info("Register valid data - Step 01: Refresh the current page");
-		registerPO.refreshCurrentPage(driver);
-
-		log.info("Register valid data - Step 02: Enter to all validation field with valid data ");
-		registerPO.filterRegisterData(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.RegisterData.PASSWORD, Data.RegisterData.PASSWORD,
+		log.info("Register valid data - Step 01: Enter to all validation field with valid data ");
+		registerPO.enterToRegisterData(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.RegisterData.PASSWORD, 
+				Data.RegisterData.PASSWORD,
 				Data.RegisterData.COMPANY_NAME);
 
 		log.info("Register valid data - Step 03: Click on register button");
@@ -94,36 +92,36 @@ public class RegisterTabTest extends BaseTest {
 
 	@Test
 	public void TC_04_Register_With_Existed_Email() {
+		log.info("Register Existed email - Step 1: Logout the previous account");
 		userHomePO.clickToLogout();
 		
-		log.info("Register Existed email - Step 1: Open Register Page");
+		log.info("Register Existed email - Step 2: Open Register Page");
 		userHomePO.clickToRegisterPage();
 
-		log.info("Register Existed email - Step 02: Enter to all field but email is existed");
-		registerPO.filterRegisterData(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.RegisterData.PASSWORD, Data.RegisterData.PASSWORD,
+		log.info("Register Existed email - Step 3: Enter to all field but email is existed");
+		registerPO.enterToRegisterData(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.RegisterData.PASSWORD, 
+				Data.RegisterData.PASSWORD,
 				Data.RegisterData.COMPANY_NAME);
 
-		log.info("Register Existed email - Step 3: Click on register button");
+		log.info("Register Existed email - Step 4: Click on register button");
 		registerPO.clickRegisterButton();
 
-		log.info("Register Existed email - Step 4: Verify existed email error message");
+		log.info("Register Existed email - Step 5: Verify existed email error message");
 		verifyEquals(registerPO.getErorrMessageByExistedEmail(), "The specified email already exists");
 	}
 
 	@Test
 	public void TC_05_Register_With_Password_Less_Than_6() {
-
-		log.info("Register with password less than 6 characters - Step 1: Refresh the current page");
-		registerPO.refreshCurrentPage(driver);
-
-		log.info("Register with password less than 6 characters - Step 2: Enter password less than 6 char ");
+		log.info("Register with password less than 6 characters - Step 1: Enter password less than 6 char ");
 		registerPO.enterToPassword("1234");
 
-		log.info("Register with password less than 6 characters - Step 3: Click on register button ");
+		log.info("Register with password less than 6 characters - Step 2: Click on register button ");
 		registerPO.clickRegisterButton();
 
-		log.info("Register with password less than 6 characters - Step 4: Verify password erorr message");
+		log.info("Register with password less than 6 characters - Step 3: Verify password erorr message");
 		verifyEquals(registerPO.getErrorMessageAtMandantoryFieldByPassword(),
 				"Password must meet the following rules:" + "\n" + "must have at least 6 characters");
 	}
@@ -131,19 +129,18 @@ public class RegisterTabTest extends BaseTest {
 	@Test
 	public void TC_06_Register_With_Wrong_Cofirm_Password() {
 
-		log.info("Register with wrong confirm password - Step 1: Refresh the current page");
-		registerPO.refreshCurrentPage(driver);
-
-		log.info(
-				"Register with wrong confirm password - Step 02: Enter to all validation field with valid data but email is existed");
-		registerPO.filterRegisterData(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.RegisterData.PASSWORD, "thisIsWrongConfirmPassword",
+		log.info("Register with wrong confirm password - Step 01: Enter valid data but confirm password is wrong");
+		registerPO.enterToRegisterData(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.RegisterData.PASSWORD, 
+				"thisIsWrongConfirmPassword",
 				Data.RegisterData.COMPANY_NAME);
 
-		log.info("Register with wrong confirm password - Step 03: Click on register button ");
+		log.info("Register with wrong confirm password - Step 02: Click on register button ");
 		registerPO.clickRegisterButton();
 
-		log.info("Register with wrong confirm password - Step 04: Verify confirm password not match erorr message");
+		log.info("Register with wrong confirm password - Step 03: Verify confirm password not match erorr message");
 		verifyEquals(registerPO.getErrorMessageAtMandantoryFieldByConfirmPassword(),
 				"The password and confirmation password do not match.");
 	}

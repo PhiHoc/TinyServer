@@ -45,27 +45,21 @@ public class LoginTabTest extends BaseTest {
 
 	@Test
 	public void TC_02_Login_With_Invalid_Email() {
-		
-		log.info("Login invalid data - Step 01: Refresh the current page ");
-		loginPO.refreshCurrentPage(driver);
 
-		log.info("Login invalid data - Step 02: Login with an invalid email ");
+		log.info("Login invalid data - Step 01: Login with an invalid email and empty password");
 		loginPO.loginWithData("1234.com","");
 
-		log.info("Login invalid data - Step 03: Verify error message");
+		log.info("Login invalid data - Step 02: Verify error message");
 		verifyEquals(loginPO.getErorrMessageByEmail(), "Wrong email");
 	}
 
 	@Test
 	public void TC_03_Login_With_Unregister_Email() {
 
-		log.info("Login empty data - Step 01: Refresh the current page ");
-		loginPO.refreshCurrentPage(driver);
-
-		log.info("Login empty data - Step 02: Login with an unregister email");
+		log.info("Login empty data - Step 01: Login with an unregister email and empty password");
 		loginPO.loginWithData(Data.getRandomEmail(),"");
 
-		log.info("Login empty data - Step 03: Verify error message");
+		log.info("Login empty data - Step 02: Verify error message");
 		verifyEquals(loginPO.getValidationSummaryErrorMessage(),
 				"Login was unsuccessful. Please correct the errors and try again.\n" + "No customer account found");
 	}
@@ -73,13 +67,10 @@ public class LoginTabTest extends BaseTest {
 	@Test
 	public void TC_04_Login_With_Valid_Email_But_Empty_Password() {
 
-		log.info("Login empty password - Step 01: Refresh the current page ");
-		loginPO.refreshCurrentPage(driver);
-
-		log.info("Login empty password - Step 02: Login with valid email but empty password");
+		log.info("Login empty password - Step 01: Login with valid email but empty password");
 		loginPO.loginWithData(Data.RegisterData.EMAIL,"");
 
-		log.info("Login empty password - Step 03: Verify error message");
+		log.info("Login empty password - Step 02: Verify error message");
 		verifyEquals(loginPO.getValidationSummaryErrorMessage(),
 				"Login was unsuccessful. Please correct the errors and try again.\n"
 						+ "The credentials provided are incorrect");
@@ -87,14 +78,11 @@ public class LoginTabTest extends BaseTest {
 
 	@Test
 	public void TC_05_Login_With_Valid_Email_But_Wrong_Password() {
-
-		log.info("Login wrong password - Step 01: Refresh the current page ");
-		loginPO.refreshCurrentPage(driver);
 		
-		log.info("Login wrong password - Step 02: Login with valid email but wrong password");
+		log.info("Login wrong password - Step 01: Login with valid email but wrong password");
 		loginPO.loginWithData(Data.RegisterData.EMAIL,"thisIsWrongPassword");
 
-		log.info("Login wrong password - Step 03: Verify error message");
+		log.info("Login wrong password - Step 02: Verify error message");
 		verifyEquals(loginPO.getValidationSummaryErrorMessage(),
 				"Login was unsuccessful. Please correct the errors and try again.\n"
 						+ "The credentials provided are incorrect");
@@ -102,14 +90,11 @@ public class LoginTabTest extends BaseTest {
 
 	@Test
 	public void TC_06_Login_With_Valid_Email_And_Password() {
-
-		log.info("Login valid data - Step 01: Refresh the current page ");
-		loginPO.refreshCurrentPage(driver);
-
-		log.info("Login valid data - Step 02: Login with valid email and password");
+		
+		log.info("Login valid data - Step 01: Login with valid email and password");
 		loginPO.loginWithData(Data.RegisterData.EMAIL,Data.RegisterData.PASSWORD);
 
-		log.info("Login valid data - Step 03: Verify current page are home page");
+		log.info("Login valid data - Step 02: Verify current page are home page");
 		log.info("Verify is logout link displayed");
 		verifyTrue(userHomePO.isLogoutLinkDisplayed());
 

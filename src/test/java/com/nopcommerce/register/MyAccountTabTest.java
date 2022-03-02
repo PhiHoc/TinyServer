@@ -36,24 +36,28 @@ public class MyAccountTabTest extends BaseTest {
 		log.info("Before testing - Step 2: Login an account");
 		loginPO = userHomePO.clickToLoginPage();
 		loginPO.loginWithData(Data.RegisterData.EMAIL, Data.RegisterData.PASSWORD);
+		
+		log.info("Before testing - Step 3: Click to my account page");
+		myAccountPO = userHomePO.clickToMyAccountPage();
 	}
 
 	@Test
 	public void TC_01_Update_Customer_Info() {
-		
-		log.info("Update customer info - Step 0: CLick on female radio");
-		myAccountPO = userHomePO.clickToMyAccountPage();
 
 		log.info("Update customer info - Step 01: CLick on female radio");
 		myAccountPO.clickOnFemaleRadio();
 
 		log.info("Update customer info - Step 02: Update data");
-		myAccountPO.updateData(Data.CustomerInfoUpdateData.FIRST_NAME, Data.CustomerInfoUpdateData.LAST_NAME,
-				Data.CustomerInfoUpdateData.DATE, Data.CustomerInfoUpdateData.MONTH, Data.CustomerInfoUpdateData.YEAR,
-				Data.CustomerInfoUpdateData.EMAIL, Data.CustomerInfoUpdateData.COMPANY_NAME);
+		myAccountPO.updateCustomerData(Data.CustomerInfoUpdateData.FIRST_NAME, 
+				Data.CustomerInfoUpdateData.LAST_NAME,
+				Data.CustomerInfoUpdateData.DATE, 
+				Data.CustomerInfoUpdateData.MONTH, 
+				Data.CustomerInfoUpdateData.YEAR,
+				Data.CustomerInfoUpdateData.EMAIL, 
+				Data.CustomerInfoUpdateData.COMPANY_NAME);
 
 		log.info("Update customer info - Step 03: Click save button");
-		myAccountPO.clickToCustomerInfoSaveButton();
+		myAccountPO.clickToSaveButtonAtCustomerInfo();
 
 		log.info("Update customer info - Step 04: Verify female gender is checked");
 		verifyTrue(myAccountPO.isFemaleRadioChecked());
@@ -90,14 +94,16 @@ public class MyAccountTabTest extends BaseTest {
 		myAccountPO.clickToAddNewButton();
 
 		log.info("Add address - Step 03: Enter data to all field");
-		myAccountPO.filterAddressData(Data.AddressesData.ADDRESS_FIRST_NAME, Data.AddressesData.ADDRESS_LAST_NAME,
+		myAccountPO.enterToAddressData(Data.AddressesData.ADDRESS_FIRST_NAME, 
+				Data.AddressesData.ADDRESS_LAST_NAME,
 				Data.AddressesData.ADDRESS_EMAIL, Data.AddressesData.ADDRESS_COMPANY_NAME,
-				Data.AddressesData.ADDRESS_COUNTRY, Data.AddressesData.ADDRESS_STATE, Data.AddressesData.ADDRESS_CITY,
-				Data.AddressesData.ADDRESS_1, Data.AddressesData.ADDRESS_2, Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE,
+				Data.AddressesData.ADDRESS_COUNTRY, Data.AddressesData.ADDRESS_STATE, 
+				Data.AddressesData.ADDRESS_CITY,Data.AddressesData.ADDRESS_1, 
+				Data.AddressesData.ADDRESS_2, Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE,
 				Data.AddressesData.ADDRESS_PHONE, Data.AddressesData.ADDRESS_FAX);
 
 		log.info("Add address - Step 4: Click save button");
-		myAccountPO.clickToAddressSaveButton();
+		myAccountPO.clickToSaveButtonAtAddress();
 
 		log.info("Add address - Step 5: Verify title");
 		String FULL_NAME = Data.AddressesData.ADDRESS_FIRST_NAME + " " + Data.AddressesData.ADDRESS_LAST_NAME;
@@ -139,13 +145,13 @@ public class MyAccountTabTest extends BaseTest {
 		myAccountPO.clickToChangePassword();
 
 		log.info("Change password - Step 02: Enter to old password");
-		myAccountPO.enterToOldPassword(Data.RegisterData.PASSWORD);
+		myAccountPO.enterToOldPasswordTextBox(Data.RegisterData.PASSWORD);
 
 		log.info("Change password - Step 03: Enter to new password");
-		myAccountPO.enterToNewPassword(Data.RegisterData.NEW_PASSWORD);
+		myAccountPO.enterToNewPasswordTextBox(Data.RegisterData.NEW_PASSWORD);
 
 		log.info("Change password - Step 04: Enter to confirm password");
-		myAccountPO.enterToConfirmNewPassword(Data.RegisterData.NEW_PASSWORD);
+		myAccountPO.enterToConfirmNewPasswordTextBox(Data.RegisterData.NEW_PASSWORD);
 
 		log.info("Change password - Step 05: Click to change password button");
 		myAccountPO.clickToChangePasswordButton();

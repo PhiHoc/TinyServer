@@ -50,7 +50,7 @@ public class OrderTabTest extends BaseTest {
 		computerPO = userHomePO.clickToComputersPage();
 
 		log.info("Add product to cart - Step 2: Click to desktop link");
-		computerPO.clickToDesktopLink();
+		computerPO.clickToSublistLinkByName("Desktops ");
 
 		log.info("Add product to cart - Step 3: Click to build your own computer product");
 		computerPO.clickToProductByName("Build your own computer");
@@ -171,7 +171,7 @@ public class OrderTabTest extends BaseTest {
 		computerPO = userHomePO.clickToComputersPage();
 
 		log.info("Update shopping cart - Step 2: Click to desktop link");
-		computerPO.clickToDesktopLink();
+		computerPO.clickToSublistLinkByName("Desktops ");
 
 		log.info("Update shopping cart - Step 3: Click to Lenovo IdeaCentre 600 All-in-One PC product");
 		computerPO.clickToProductByName("Lenovo IdeaCentre 600 All-in-One PC");
@@ -208,7 +208,7 @@ public class OrderTabTest extends BaseTest {
 		computerPO = userHomePO.clickToComputersPage();
 
 		log.info("Checkout/ Order payment - Step 2: Click to notebook link");
-		computerPO.clickToNoteBooksLink();
+		computerPO.clickToSublistLinkByName("Notebooks");
 
 		log.info("Checkout/ Order payment - Step 3: Click to Apple MacBook Pro 13-inch product");
 		computerPO.clickToProductByName("Apple MacBook Pro 13-inch");
@@ -229,10 +229,10 @@ public class OrderTabTest extends BaseTest {
 		shoppingcartPO.clickToEstimateShippingLink();
 
 		log.info("Checkout/ Order payment - Step 9: Select country");
-		shoppingcartPO.selectShippingAddressCountryDropDown();
+		shoppingcartPO.selectShippingAddressCountryDropDownByText(Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 10: Enter to zip/ postal code");
-		shoppingcartPO.enterToShippingAddressZipPostalCode();
+		shoppingcartPO.enterToShippingAddressZipPostalCode(Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE);
 
 		log.info("Checkout/ Order payment - Step 11: Wait for shipping method appear");
 		shoppingcartPO.waitForShippingMethodAppear();
@@ -249,10 +249,15 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 15: Uncheck to ship to the same address");
 		checkoutPO.uncheckToShipToTheSameAddress();
 
-		log.info("Checkout/ Order payment - Step 16: Enter to billing address");
-		checkoutPO.enterDataToBillingAddress(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.AddressesData.ADDRESS_COUNTRY, Data.RegisterData.CITY,
-				Data.RegisterData.ADDRESS_1, Data.RegisterData.ZIP_POSTAL_CODE, Data.RegisterData.PHONE);
+		log.info("Checkout/ Order payment - Step 16: Enter to billing address with register data");
+		checkoutPO.enterDataToBillingAddress(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.RegisterData.CITY,
+				Data.RegisterData.ADDRESS_1, 
+				Data.RegisterData.ZIP_POSTAL_CODE, 
+				Data.RegisterData.PHONE);
 
 		log.info("Checkout/ Order payment - Step 17: Click to continue button");
 		checkoutPO.clickToBillingContinueButton();
@@ -260,11 +265,15 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 18: Select new address on shipping address dropdown");
 		checkoutPO.selectNewShippingAddress();
 
-		log.info("Checkout/ Order payment - Step 19: Enter to billing address first name");
+		log.info("Checkout/ Order payment - Step 19: Enter to billing address with address data");
 		checkoutPO.enterDataToShippingAddress(Data.AddressesData.ADDRESS_FIRST_NAME,
-				Data.AddressesData.ADDRESS_LAST_NAME, Data.AddressesData.ADDRESS_EMAIL,
-				Data.AddressesData.ADDRESS_COUNTRY, Data.AddressesData.ADDRESS_CITY, Data.AddressesData.ADDRESS_1,
-				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, Data.AddressesData.ADDRESS_PHONE);
+				Data.AddressesData.ADDRESS_LAST_NAME, 
+				Data.AddressesData.ADDRESS_EMAIL,
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.AddressesData.ADDRESS_CITY, 
+				Data.AddressesData.ADDRESS_1,
+				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, 
+				Data.AddressesData.ADDRESS_PHONE);
 
 		log.info("Checkout/ Order payment - Step 20: Click to continue button");
 		checkoutPO.clickToShippingAddressContinueButton();
@@ -280,9 +289,14 @@ public class OrderTabTest extends BaseTest {
 
 		log.info("Checkout/ Order payment - Step 24: Verify text in payment info section");
 		verifyEquals(checkoutPO.getPaymentInfoSectionText(),
-				"Mail Personal or Business Check, Cashier's Check or money order to:\n\n" + "NOP SOLUTIONS\n"
-						+ "your address here,\n" + "New York, NY 10001\n" + "USA\n"
-						+ "Notice that if you pay by Personal or Business Check, your order may be held for up to 10 days after we receive your check to allow enough time for the check to clear. If you want us to ship faster upon receipt of your payment, then we recommend your send a money order or Cashier's check.\n"
+				"Mail Personal or Business Check, Cashier's Check or money order to:\n\n" 
+						+ "NOP SOLUTIONS\n"
+						+ "your address here,\n" 
+						+ "New York, NY 10001\n" + "USA\n"
+						+ "Notice that if you pay by Personal or Business Check, "
+						+ "your order may be held for up to 10 days after we receive your check to allow enough time for the check to clear. "
+						+ "If you want us to ship faster upon receipt of your payment, "
+						+ "then we recommend your send a money order or Cashier's check.\n"
 						+ "P.S. You can edit this text from admin panel.");
 
 		log.info("Checkout/ Order payment - Step 25: Click payment info continue button");
@@ -290,10 +304,14 @@ public class OrderTabTest extends BaseTest {
 
 		log.info("Checkout/ Order payment - Step 26: Verify billing info");
 		verifyEquals(checkoutPO.getBillingInfoText(),
-				"Billing Address\n" + Data.RegisterData.FIRST_NAME + " " + Data.RegisterData.LAST_NAME + "\n"
-						+ "Email: " + Data.RegisterData.EMAIL + "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
-						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME + "\n" + Data.RegisterData.ADDRESS_1 + "\n"
-						+ Data.RegisterData.CITY + "," + Data.RegisterData.ZIP_POSTAL_CODE + "\n"
+				"Billing Address\n" + Data.RegisterData.FIRST_NAME + " " 
+						+ Data.RegisterData.LAST_NAME + "\n"
+						+ "Email: " + Data.RegisterData.EMAIL + "\n" 
+						+ "Phone: " + Data.RegisterData.PHONE + "\n"
+						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME 
+						+ "\n" + Data.RegisterData.ADDRESS_1 + "\n"
+						+ Data.RegisterData.CITY + "," 
+						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 27: Verify billing info");
@@ -381,10 +399,14 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 51: Verify Shipping Address info");
 		verifyEquals(checkoutPO.getShippinAddressInfoText(),
 				"Shipping Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " "
-						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL
-						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE + "\n" + "Fax:\n"
-						+ Data.RegisterData.COMPANY_NAME + "\n" + Data.AddressesData.ADDRESS_1 + "\n"
-						+ Data.AddressesData.ADDRESS_CITY + "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" 
+						+ "Email: " + Data.AddressesData.ADDRESS_EMAIL
+						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE 
+						+ "\n" + "Fax:\n"
+						+ Data.RegisterData.COMPANY_NAME + "\n" 
+						+ Data.AddressesData.ADDRESS_1 + "\n"
+						+ Data.AddressesData.ADDRESS_CITY + "," 
+						+ Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 52: Verify shipping method info");
@@ -423,7 +445,7 @@ public class OrderTabTest extends BaseTest {
 		computerPO = userHomePO.clickToComputersPage();
 
 		log.info("Checkout/ Order payment - Step 2: Click to notebook link");
-		computerPO.clickToNoteBooksLink();
+		computerPO.clickToSublistLinkByName("Notebooks");
 
 		log.info("Checkout/ Order payment - Step 3: Click to Apple MacBook Pro 13-inch product");
 		computerPO.clickToProductByName("Apple MacBook Pro 13-inch");
@@ -444,10 +466,10 @@ public class OrderTabTest extends BaseTest {
 		shoppingcartPO.clickToEstimateShippingLink();
 
 		log.info("Checkout/ Order payment - Step 9: Select country");
-		shoppingcartPO.selectShippingAddressCountryDropDown();
+		shoppingcartPO.selectShippingAddressCountryDropDownByText(Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 10: Enter to zip/ postal code");
-		shoppingcartPO.enterToShippingAddressZipPostalCode();
+		shoppingcartPO.enterToShippingAddressZipPostalCode(Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE);
 
 		log.info("Checkout/ Order payment - Step 11: Wait for shipping method appear");
 		shoppingcartPO.waitForShippingMethodAppear();
@@ -464,58 +486,70 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 15: Uncheck to ship to the same address");
 		checkoutPO.uncheckToShipToTheSameAddress();
 
-		log.info("Checkout/ Order payment - Step 15.5: Selecct new billing address");
+		log.info("Checkout/ Order payment - Step 16: Selecct new billing address");
 		checkoutPO.selectNewBillingAddress();
 
-		log.info("Checkout/ Order payment - Step 16: Enter to billing address first name");
-		checkoutPO.enterDataToBillingAddress(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.AddressesData.ADDRESS_COUNTRY, Data.RegisterData.CITY,
-				Data.RegisterData.ADDRESS_1, Data.RegisterData.ZIP_POSTAL_CODE, Data.RegisterData.PHONE);
+		log.info("Checkout/ Order payment - Step 17: Enter to billing address with register data");
+		checkoutPO.enterDataToBillingAddress(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.RegisterData.CITY,
+				Data.RegisterData.ADDRESS_1, 
+				Data.RegisterData.ZIP_POSTAL_CODE, 
+				Data.RegisterData.PHONE);
 
-		log.info("Checkout/ Order payment - Step 17: Click to continue button");
+		log.info("Checkout/ Order payment - Step 18: Click to continue button");
 		checkoutPO.clickToBillingContinueButton();
 
-		log.info("Checkout/ Order payment - Step 18: Select new address on shipping address dropdown");
+		log.info("Checkout/ Order payment - Step 19: Select new address on shipping address dropdown");
 		checkoutPO.selectNewShippingAddress();
 
-		log.info("Checkout/ Order payment - Step 19: Enter to shipping address first name");
+		log.info("Checkout/ Order payment - Step 20: Enter to shipping address with address data");
 		checkoutPO.enterDataToShippingAddress(Data.AddressesData.ADDRESS_FIRST_NAME,
-				Data.AddressesData.ADDRESS_LAST_NAME, Data.AddressesData.ADDRESS_EMAIL,
-				Data.AddressesData.ADDRESS_COUNTRY, Data.AddressesData.ADDRESS_CITY, Data.AddressesData.ADDRESS_1,
-				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, Data.AddressesData.ADDRESS_PHONE);
+				Data.AddressesData.ADDRESS_LAST_NAME, 
+				Data.AddressesData.ADDRESS_EMAIL,
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.AddressesData.ADDRESS_CITY, 
+				Data.AddressesData.ADDRESS_1,
+				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, 
+				Data.AddressesData.ADDRESS_PHONE);
 
-		log.info("Checkout/ Order payment - Step 20: Click to continue button");
+		log.info("Checkout/ Order payment - Step 21: Click to continue button");
 		checkoutPO.clickToShippingAddressContinueButton();
 
-		log.info("Checkout/ Order payment - Step 21: Click to shipping method continue button");
+		log.info("Checkout/ Order payment - Step 22: Click to shipping method continue button");
 		checkoutPO.clickToShippingMethodContinueButton();
 
-		log.info("Checkout/ Order payment - Step 22: Select payment method credit card");
+		log.info("Checkout/ Order payment - Step 23: Select payment method credit card");
 		checkoutPO.selectToPaymentMethodCreditCard();
 
-		log.info("Checkout/ Order payment - Step 23: Click to payment method continue button");
+		log.info("Checkout/ Order payment - Step 24: Click to payment method continue button");
 		checkoutPO.clickToPaymentMethodContinueButton();
 
-		log.info("Checkout/ Order payment - Step 24: Enter to card holder name");
+		log.info("Checkout/ Order payment - Step 25: Enter to card holder name");
 		checkoutPO.enterToCardHolderName("Amex");
 
-		log.info("Checkout/ Order payment - Step 25: Enter to card number");
+		log.info("Checkout/ Order payment - Step 26: Enter to card number");
 		checkoutPO.enterToCardNumber("374245455400126");
 
-		log.info("Checkout/ Order payment - Step 26: Enter to card code");
+		log.info("Checkout/ Order payment - Step 27: Enter to card code");
 		checkoutPO.enterToCardCode("123");
-
 		checkoutPO.selectExpireYear("2036");
 
-		log.info("Checkout/ Order payment - Step 27: Click payment info continue button");
+		log.info("Checkout/ Order payment - Step 28 Click payment info continue button");
 		checkoutPO.clickToPaymentInfoContinueButton();
 
-		log.info("Checkout/ Order payment - Step 28: Verify billing info");
+		log.info("Checkout/ Order payment - Step 29: Verify billing info");
 		verifyEquals(checkoutPO.getBillingInfoText(),
-				"Billing Address\n" + Data.RegisterData.FIRST_NAME + " " + Data.RegisterData.LAST_NAME + "\n"
-						+ "Email: " + Data.RegisterData.EMAIL + "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
-						+ "Fax:\n" + Data.RegisterData.ADDRESS_1 + "\n" + Data.RegisterData.CITY + ","
-						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n" + Data.AddressesData.ADDRESS_COUNTRY);
+				"Billing Address\n" + Data.RegisterData.FIRST_NAME + " " 
+						+ Data.RegisterData.LAST_NAME + "\n"
+						+ "Email: " + Data.RegisterData.EMAIL + "\n" 
+						+ "Phone: " + Data.RegisterData.PHONE + "\n"
+						+ "Fax:\n" + Data.RegisterData.ADDRESS_1 
+						+ "\n" + Data.RegisterData.CITY + ","
+						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n" 
+						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 29: Verify billing info");
 		verifyEquals(checkoutPO.getPaymentMethodText(), "Payment Method: Credit Card");
@@ -523,10 +557,14 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 30: Verify Shipping Address info");
 		verifyEquals(checkoutPO.getShippinAddressInfoText(),
 				"Shipping Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " "
-						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL
-						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE + "\n" + "Fax:\n"
-						+ Data.RegisterData.COMPANY_NAME + "\n" + Data.AddressesData.ADDRESS_1 + "\n"
-						+ Data.AddressesData.ADDRESS_CITY + "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" 
+						+ "Email: " + Data.AddressesData.ADDRESS_EMAIL
+						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE 
+						+ "\n" + "Fax:\n"
+						+ Data.RegisterData.COMPANY_NAME + "\n" 
+						+ Data.AddressesData.ADDRESS_1 + "\n"
+						+ Data.AddressesData.ADDRESS_CITY + "," 
+						+ Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 31: Verify shipping method info");
@@ -550,7 +588,7 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 37: Verify product sub total");
 		verifyEquals(checkoutPO.getProductSubtotalText(), "$3,600.00");
 
-		log.info("Checkout/ Order payment - Step 37: Verify gift wrapping");
+		log.info("Checkout/ Order payment - Step 38: Verify gift wrapping");
 		verifyEquals(checkoutPO.getGiftWrappingText(), "Gift wrapping: No");
 
 		log.info("Checkout/ Order payment - Step 39: Verify order sub total");
@@ -590,10 +628,14 @@ public class OrderTabTest extends BaseTest {
 
 		log.info("Checkout/ Order payment - Step 51 Verify billing info");
 		verifyEquals(checkoutPO.getBillingInfoText(),
-				"Billing Address\n" + Data.RegisterData.FIRST_NAME + " " + Data.RegisterData.LAST_NAME + "\n"
-						+ "Email: " + Data.RegisterData.EMAIL + "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
-						+ "Fax:\n" + Data.RegisterData.ADDRESS_1 + "\n" + Data.RegisterData.CITY + ","
-						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n" + Data.AddressesData.ADDRESS_COUNTRY);
+				"Billing Address\n" + Data.RegisterData.FIRST_NAME 
+						+ " " + Data.RegisterData.LAST_NAME + "\n"
+						+ "Email: " + Data.RegisterData.EMAIL 
+						+ "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
+						+ "Fax:\n" + Data.RegisterData.ADDRESS_1 
+						+ "\n" + Data.RegisterData.CITY + ","
+						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n" 
+						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 52: Verify billing info");
 		verifyEquals(myAccountPO.getPaymentMethodText(), "Payment Method: Credit Card");
@@ -601,10 +643,14 @@ public class OrderTabTest extends BaseTest {
 		log.info("Checkout/ Order payment - Step 53: Verify Shipping Address info");
 		verifyEquals(checkoutPO.getShippinAddressInfoText(),
 				"Shipping Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " "
-						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL
-						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE + "\n" + "Fax:\n"
-						+ Data.RegisterData.COMPANY_NAME + "\n" + Data.AddressesData.ADDRESS_1 + "\n"
-						+ Data.AddressesData.ADDRESS_CITY + "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+						+ Data.AddressesData.ADDRESS_LAST_NAME + "\n" + "Email: " 
+						+ Data.AddressesData.ADDRESS_EMAIL
+						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE 
+						+ "\n" + "Fax:\n"
+						+ Data.RegisterData.COMPANY_NAME + "\n" 
+						+ Data.AddressesData.ADDRESS_1 + "\n"
+						+ Data.AddressesData.ADDRESS_CITY + "," 
+						+ Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
 		log.info("Checkout/ Order payment - Step 54: Verify shipping method info");
@@ -659,164 +705,192 @@ public class OrderTabTest extends BaseTest {
 		log.info("Re-order - Step 7: Select new billing address dropdown");
 		checkoutPO.selectNewBillingAddress();
 
-		log.info("Re-order - Step 8: Enter to address first name");
+		log.info("Re-order - Step 8: Enter to address with address data");
 		checkoutPO.enterDataToBillingAddress(Data.AddressesData.ADDRESS_FIRST_NAME,
-				Data.AddressesData.ADDRESS_LAST_NAME, Data.AddressesData.ADDRESS_EMAIL,
-				Data.AddressesData.ADDRESS_COUNTRY, Data.AddressesData.ADDRESS_CITY, Data.AddressesData.ADDRESS_1,
-				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, Data.AddressesData.ADDRESS_PHONE);
+				Data.AddressesData.ADDRESS_LAST_NAME, 
+				Data.AddressesData.ADDRESS_EMAIL,
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.AddressesData.ADDRESS_CITY, 
+				Data.AddressesData.ADDRESS_1,
+				Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE, 
+				Data.AddressesData.ADDRESS_PHONE);
 
-		log.info("Re-order - Step 16: Click to continue button");
+		log.info("Re-order - Step 9: Click to continue button");
 		checkoutPO.clickToBillingContinueButton();
 
-		log.info("Re-order - Step 17: Select new address on shipping address dropdown");
+		log.info("Re-order - Step 10: Select new address on shipping address dropdown");
 		checkoutPO.selectNewShippingAddress();
 
-		log.info("Re-order - Step 18: Enter to shipping address first name");
-		checkoutPO.enterDataToShippingAddress(Data.RegisterData.FIRST_NAME, Data.RegisterData.LAST_NAME,
-				Data.RegisterData.EMAIL, Data.AddressesData.ADDRESS_COUNTRY, Data.RegisterData.CITY,
-				Data.RegisterData.ADDRESS_1, Data.RegisterData.ZIP_POSTAL_CODE, Data.RegisterData.PHONE);
+		log.info("Re-order - Step 11: Enter to shipping address with register data");
+		checkoutPO.enterDataToShippingAddress(Data.RegisterData.FIRST_NAME, 
+				Data.RegisterData.LAST_NAME,
+				Data.RegisterData.EMAIL, 
+				Data.AddressesData.ADDRESS_COUNTRY, 
+				Data.RegisterData.CITY,
+				Data.RegisterData.ADDRESS_1, 
+				Data.RegisterData.ZIP_POSTAL_CODE, 
+				Data.RegisterData.PHONE);
 
-		log.info("Re-order - Step 19: Click to continue button");
+		log.info("Re-order - Step 12: Click to continue button");
 		checkoutPO.clickToShippingAddressContinueButton();
 
-		log.info("Re-order - Step 20: Check to next day air radio");
+		log.info("Re-order - Step 13: Check to next day air radio");
 		checkoutPO.checkToNextDayAirMethodRadio();
 
-		log.info("Re-order - Step 21: Click to shipping method continue button");
+		log.info("Re-order - Step 14: Click to shipping method continue button");
 		checkoutPO.clickToShippingMethodContinueButton();
 
-		log.info("Re-order - Step 22: Select payment method check/ money order");
+		log.info("Re-order - Step 15: Select payment method check/ money order");
 		checkoutPO.selectToPaymentMethodCheckMoneyOrder();
 
-		log.info("Re-order - Step 23: Click to payment method continue button");
+		log.info("Re-order - Step 16: Click to payment method continue button");
 		checkoutPO.clickToPaymentMethodContinueButton();
 
-		log.info("Re-order - Step 24: Verify text in payment info section");
+		log.info("Re-order - Step 17: Verify text in payment info section");
 		verifyEquals(checkoutPO.getPaymentInfoSectionText(),
-				"Mail Personal or Business Check, Cashier's Check or money order to:\n\n" + "NOP SOLUTIONS\n"
-						+ "your address here,\n" + "New York, NY 10001\n" + "USA\n"
-						+ "Notice that if you pay by Personal or Business Check, your order may be held for up to 10 days after we receive your check to allow enough time for the check to clear. If you want us to ship faster upon receipt of your payment, then we recommend your send a money order or Cashier's check.\n"
+				"Mail Personal or Business Check, Cashier's Check or money order to:\n\n" 
+						+ "NOP SOLUTIONS\n"
+						+ "your address here,\n" 
+						+ "New York, NY 10001\n" + "USA\n"
+						+ "Notice that if you pay by Personal or Business Check, "
+						+ "your order may be held for up to 10 days after we receive your check to allow enough time for the check to clear. "
+						+ "If you want us to ship faster upon receipt of your payment, "
+						+ "then we recommend your send a money order or Cashier's check.\n"
 						+ "P.S. You can edit this text from admin panel.");
 
-		log.info("Re-order - Step 25: Click payment info continue button");
+		log.info("Re-order - Step 18: Click payment info continue button");
 		checkoutPO.clickToPaymentInfoContinueButton();
 
-		log.info("Re-order - Step 26: Verify billing info");
+		log.info("Re-order - Step 19: Verify billing info");
 		verifyEquals(checkoutPO.getBillingInfoText(),
-				"Billing Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " " + Data.AddressesData.ADDRESS_LAST_NAME
-						+ "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL + "\n" + "Phone: "
-						+ Data.AddressesData.ADDRESS_PHONE + "\n" + "Fax:\n" + Data.AddressesData.ADDRESS_1 + "\n"
-						+ Data.AddressesData.ADDRESS_CITY + "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+				"Billing Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " " 
+						+ Data.AddressesData.ADDRESS_LAST_NAME
+						+ "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL 
+						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE 
+						+ "\n" + "Fax:\n" + Data.AddressesData.ADDRESS_1 + "\n"
+						+ Data.AddressesData.ADDRESS_CITY 
+						+ "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
-		log.info("Re-order - Step 27: Verify billing info");
+		log.info("Re-order - Step 20: Verify billing info");
 		verifyEquals(checkoutPO.getPaymentMethodText(), "Payment Method: Check / Money Order");
 
-		log.info("Re-order - Step 28: Verify Shipping Address info");
+		log.info("Re-order - Step 21: Verify Shipping Address info");
 		verifyEquals(checkoutPO.getShippinAddressInfoText(),
-				"Shipping Address\n" + Data.RegisterData.FIRST_NAME + " " + Data.RegisterData.LAST_NAME + "\n"
-						+ "Email: " + Data.RegisterData.EMAIL + "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
-						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME + "\n" + Data.RegisterData.ADDRESS_1 + "\n"
-						+ Data.RegisterData.CITY + "," + Data.RegisterData.ZIP_POSTAL_CODE + "\n"
+				"Shipping Address\n" + Data.RegisterData.FIRST_NAME + " " 
+						+ Data.RegisterData.LAST_NAME + "\n"
+						+ "Email: " + Data.RegisterData.EMAIL + "\n" 
+						+ "Phone: " + Data.RegisterData.PHONE + "\n"
+						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME 
+						+ "\n" + Data.RegisterData.ADDRESS_1 + "\n"
+						+ Data.RegisterData.CITY + "," 
+						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
-		log.info("Re-order - Step 29: Verify shipping method info");
+		log.info("Re-order - Step 22: Verify shipping method info");
 		verifyEquals(checkoutPO.getShippingMethodText(), "Shipping Method: Next Day Air");
 
-		log.info("Re-order - Step 30: Verify product SKU number");
+		log.info("Re-order - Step 23: Verify product SKU number");
 		verifyEquals(checkoutPO.getProductSKUText(), "AP_MBP_13");
 
-		log.info("Re-order - Step 31: Verify product name");
+		log.info("Re-order - Step 24: Verify product name");
 		verifyEquals(checkoutPO.getProductNameText(), "Apple MacBook Pro 13-inch");
 
-		log.info("Re-order - Step 32: Verify product price");
+		log.info("Re-order - Step 25: Verify product price");
 		verifyEquals(checkoutPO.getProductPriceText(), "$1,800.00");
 
-		log.info("Re-order - Step 33: Verify product quantity");
+		log.info("Re-order - Step 26: Verify product quantity");
 		verifyEquals(checkoutPO.getProductQuantityText(), "10");
 
-		log.info("Re-order - Step 34: Verify product sub total");
+		log.info("Re-order - Step 27: Verify product sub total");
 		verifyEquals(checkoutPO.getProductSubtotalText(), "$18,000.00");
 
-		log.info("Re-order - Step 35: Verify gift wrapping");
+		log.info("Re-order - Step 28: Verify gift wrapping");
 		verifyEquals(checkoutPO.getGiftWrappingText(), "Gift wrapping: No");
 
-		log.info("Re-order - Step 36: Verify order sub total");
+		log.info("Re-order - Step 29: Verify order sub total");
 		verifyEquals(checkoutPO.getOrderSubTotalText(), "Sub-Total: $18,000.00");
 
-		log.info("Re-order - Step 37: Verify shipping");
+		log.info("Re-order - Step 30: Verify shipping");
 		verifyEquals(checkoutPO.getShippingCostText(), "Shipping: (Next Day Air) $0.00");
 
-		log.info("Re-order - Step 38: Verify tax");
+		log.info("Re-order - Step 31: Verify tax");
 		verifyEquals(checkoutPO.getTaxText(), "Tax: $0.00");
 
-		log.info("Re-order - Step 39: Verify order total");
+		log.info("Re-order - Step 32: Verify order total");
 		verifyEquals(checkoutPO.getOrderTotalText(), "Total: $18,000.00");
 
-		log.info("Re-order - Step 40: Click to confirm button");
+		log.info("Re-order - Step 33: Click to confirm button");
 		checkoutPO.clickToConfirmButton();
 
-		log.info("Re-order - Step 42: Verify order compele page body title message");
+		log.info("Re-order - Step 34: Verify order compele page body title message");
 		verifyEquals(checkoutPO.getOrderCompletePageBodyTitleText(), "Your order has been successfully processed!");
 
-		log.info("Re-order - Step 43: Verify is order number visible");
+		log.info("Re-order - Step 35: Verify is order number visible");
 		verifyTrue(checkoutPO.isOrderNumberVisible());
 
 		String orderNumber = checkoutPO.getOrderNumber();
 
-		log.info("Re-order - Step 44: Click to my account page");
+		log.info("Re-order - Step 36: Click to my account page");
 		myAccountPO = userHomePO.clickToMyAccountPage();
 
-		log.info("Re-order - Step 45: Click to order link");
+		log.info("Re-order - Step 37: Click to order link");
 		myAccountPO.clickToOrderLink();
 
-		log.info("Re-order - Step 46: Verify order number");
+		log.info("Re-order - Step 38: Verify order number");
 		verifyEquals(myAccountPO.getOrderNumber().toUpperCase(), orderNumber);
 
-		log.info("Re-order - Step 47: Click to detail button");
+		log.info("Re-order - Step 39: Click to detail button");
 		myAccountPO.clickToDetailButton();
 
-		log.info("Re-order - Step 48: Verify billing info");
+		log.info("Re-order - Step 40: Verify billing info");
 		verifyEquals(checkoutPO.getBillingInfoText(),
-				"Billing Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " " + Data.AddressesData.ADDRESS_LAST_NAME
-						+ "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL + "\n" + "Phone: "
-						+ Data.AddressesData.ADDRESS_PHONE + "\n" + "Fax:\n" + Data.AddressesData.ADDRESS_1 + "\n"
-						+ Data.AddressesData.ADDRESS_CITY + "," + Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
+				"Billing Address\n" + Data.AddressesData.ADDRESS_FIRST_NAME + " " 
+						+ Data.AddressesData.ADDRESS_LAST_NAME
+						+ "\n" + "Email: " + Data.AddressesData.ADDRESS_EMAIL 
+						+ "\n" + "Phone: " + Data.AddressesData.ADDRESS_PHONE + "\n" 
+						+ "Fax:\n" + Data.AddressesData.ADDRESS_1 + "\n"
+						+ Data.AddressesData.ADDRESS_CITY + "," 
+						+ Data.AddressesData.ADDRESS_ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
-		log.info("Re-order - Step 49: Verify billing info");
+		log.info("Re-order - Step 41: Verify billing info");
 		verifyEquals(myAccountPO.getPaymentMethodText(), "Payment Method: Check / Money Order");
 
-		log.info("Re-order - Step 50: Verify Shipping Address info");
+		log.info("Re-order - Step 42: Verify Shipping Address info");
 		verifyEquals(checkoutPO.getShippinAddressInfoText(),
-				"Shipping Address\n" + Data.RegisterData.FIRST_NAME + " " + Data.RegisterData.LAST_NAME + "\n"
-						+ "Email: " + Data.RegisterData.EMAIL + "\n" + "Phone: " + Data.RegisterData.PHONE + "\n"
-						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME + "\n" + Data.RegisterData.ADDRESS_1 + "\n"
-						+ Data.RegisterData.CITY + "," + Data.RegisterData.ZIP_POSTAL_CODE + "\n"
+				"Shipping Address\n" + Data.RegisterData.FIRST_NAME + " " 
+						+ Data.RegisterData.LAST_NAME + "\n"
+						+ "Email: " + Data.RegisterData.EMAIL + "\n" 
+						+ "Phone: " + Data.RegisterData.PHONE + "\n"
+						+ "Fax:\n" + Data.RegisterData.COMPANY_NAME +
+						"\n" + Data.RegisterData.ADDRESS_1 + "\n"
+						+ Data.RegisterData.CITY + "," 
+						+ Data.RegisterData.ZIP_POSTAL_CODE + "\n"
 						+ Data.AddressesData.ADDRESS_COUNTRY);
 
-		log.info("Re-order - Step 51: Verify shipping method info");
+		log.info("Re-order - Step 43: Verify shipping method info");
 		verifyEquals(myAccountPO.getShippingMethodText(), "Shipping Method: Next Day Air");
 
-		log.info("Re-order - Step 52: Verify product SKU number");
+		log.info("Re-order - Step 44: Verify product SKU number");
 		verifyEquals(myAccountPO.getProductSKUText(), "AP_MBP_13");
 
-		log.info("Re-order - Step 53: Verify product name");
+		log.info("Re-order - Step 45: Verify product name");
 		verifyEquals(myAccountPO.getProductNameText(), "Apple MacBook Pro 13-inch");
 
-		log.info("Re-order - Step 54: Verify product price");
+		log.info("Re-order - Step 46: Verify product price");
 		verifyEquals(myAccountPO.getProductPriceText(), "$1,800.00");
 
-		log.info("Re-order - Step 55: Verify product quantity");
+		log.info("Re-order - Step 47: Verify product quantity");
 		verifyEquals(myAccountPO.getProductQuantityText(), "10");
 
-		log.info("Re-order - Step 56: Verify product sub total");
+		log.info("Re-order - Step 48: Verify product sub total");
 		verifyEquals(myAccountPO.getProductSubtotalText(), "$18,000.00");
 
-		log.info("Re-order - Step 57: Verify gift wrapping");
+		log.info("Re-order - Step 49: Verify gift wrapping");
 		verifyEquals(myAccountPO.getGiftWrappingText(), "Gift wrapping: No");
 
-		log.info("Re-order - Step 58: Verify order sub total");
+		log.info("Re-order - Step 50: Verify order sub total");
 		verifyEquals(myAccountPO.getCartTotalText(),
 				"Sub-Total: $18,000.00\n" + "Shipping: $0.00\n" + "Tax: $0.00\n" + "Order Total: $18,000.00");
 

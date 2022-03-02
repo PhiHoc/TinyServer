@@ -35,6 +35,7 @@ public class WishlistCompareRecentViewTabTest extends BaseTest {
 	public void beforeClass(String browserName, String appUrl) {
 		driver = getBrowserDriver(browserName, appUrl);
 		this.appUrl = appUrl;
+		
 		log.info("Register - Step 1: Open home Page");
 		userHomePO = PageGeneratorManager.getHomePage(driver);
 		
@@ -156,7 +157,7 @@ public class WishlistCompareRecentViewTabTest extends BaseTest {
 		compareProductPO = userHomePO.clickToCompareProductListPage();
 		
 		log.info("Add product to compare - step 9: Verify are two remove buttons displayed");
-		verifyTrue(compareProductPO.areTwoRemoveButtonsDisplayed());
+		verifyTrue(compareProductPO.getNumberOfRemoveButtonsDisplayed() == 2);
 		
 		log.info("Add product to compare - step 10: Verify name of products");
 		verifyEquals(compareProductPO.getNameProductInCompareTable(),"Name Apple MacBook Pro 13-inch Build your own computer");
@@ -172,7 +173,7 @@ public class WishlistCompareRecentViewTabTest extends BaseTest {
 		computersPO = userHomePO.clickToComputersPage();
 		
 		log.info("Recently view product - step 3: Click to notebooks link");
-		computersPO.clickToNoteBooksLink();
+		computersPO.clickToSublistLinkByName("Notebooks");
 		
 		log.info("Recently view product - step 4: View first product");
 		computersPO.clickToProductByName("Apple MacBook Pro 13-inch");
@@ -197,6 +198,7 @@ public class WishlistCompareRecentViewTabTest extends BaseTest {
 		log.info("Recently view product - step 9: Click to recently view product link");
 		recentlyViewPO = userHomePO.clickToRecentlyViewPage();
 		
+		log.info("Recently view product - step 10: Verify 5 latest viewed product");
 		verifyEquals(recentlyViewPO.getProductTitle(), "Lenovo Thinkpad X1 Carbon Laptop HP Spectre XT Pro UltraBook HP Envy 6-1180ca 15.6-Inch Sleekbook ");
 		
 	}

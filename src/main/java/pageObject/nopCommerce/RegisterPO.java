@@ -91,7 +91,7 @@ public class RegisterPO extends BasePage {
 	}
 
 
-	public void filterRegisterData(String fName, String lName, String email, String pwd, String confirmPwd,
+	public void enterToRegisterData(String fName, String lName, String email, String pwd, String confirmPwd,
 			String company) {
 		enterToFirstName(fName);
 		enterToLastName(lName);

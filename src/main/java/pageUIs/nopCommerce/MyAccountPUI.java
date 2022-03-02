@@ -18,7 +18,7 @@ public class MyAccountPUI {
 
 	public static final String DOB_YEAR_DROPDOWN = "//select[@name='DateOfBirthYear']";
 
-	public static final String CUSTOMER_INFO_SAVE_BUTTON = "//button[@id='save-info-button']";
+	public static final String SAVE_BUTTON_AT_CUSTOMER_INFO = "//button[@id='save-info-button']";
 
 	// Addresses
 	public static final String ADDRESSES_LINK = "//li[@class='customer-addresses inactive']/a";
@@ -49,7 +49,7 @@ public class MyAccountPUI {
 
 	public static final String ADDRESS_FAX_TEXTBOX = "//input[@id='Address_FaxNumber']";
 
-	public static final String ADDRESS_SAVE_BUTTON = "//button[@class='button-1 save-address-button']";
+	public static final String SAVE_BUTTON_AT_ADDRESS = "//button[@class='button-1 save-address-button']";
 
 	public static final String ADDRESS_TITLE = "//div[@class='section address-item']/div[@class='title']";
 

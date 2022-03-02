@@ -26,17 +26,6 @@ public class Data {
 			NEW_PASSWORD = getRandomPassword();
 			ZIP_POSTAL_CODE = getRandomNumber();
 		}
-//		public static String FIRST_NAME = getRandomName();
-//		public static String LAST_NAME = getRandomString(5);
-//		public static String COMPANY_NAME = "CTY " + getRandomString(5);
-//		public static String CITY = "TP" + getRandomString(3);
-//		public static String ADDRESS_1 = getRandomAddress();
-//		public static String EMAIL = getRandomEmail();
-//		public static String PASSWORD = getRandomPassword();
-//		public static String PHONE = getRandomNumber();
-//		public static String FAX = getRandomNumber();
-//		public static String NEW_PASSWORD = getRandomPassword();
-//		public static String ZIP_POSTAL_CODE = getRandomNumber();
 	}
 
 	public static class CustomerInfoUpdateData {

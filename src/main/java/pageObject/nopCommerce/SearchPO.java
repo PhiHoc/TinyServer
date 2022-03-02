@@ -16,7 +16,7 @@ public class SearchPO extends BasePage {
 		this.driver = driver;
 	}
 	
-	public void enterToSearchKeyWord(String data)
+	public void enterToSearchKeyWordTextBox(String data)
 	{
 		waitForAllElementVisible(driver, SearchPUI.SEARCH_KEYWORD_TEXTBOX);
 		sendkeysToElement(driver, SearchPUI.SEARCH_KEYWORD_TEXTBOX, data);

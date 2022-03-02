@@ -17,7 +17,7 @@ public class MyAccountPO extends BasePage {
 		checkToCheckboxOrRadio(driver, MyAccountPUI.FEMALE_RADIO);
 	}
 
-	public void updateData(String firstName, String lastName, String date, String month, String year, String email,
+	public void updateCustomerData(String firstName, String lastName, String date, String month, String year, String email,
 			String companyName) {
 		updateToFirstName(firstName);
 		updateToLastName(lastName);
@@ -102,9 +102,9 @@ public class MyAccountPO extends BasePage {
 		return getSelectedItemDropdown(driver, MyAccountPUI.DOB_YEAR_DROPDOWN);
 	}
 
-	public void clickToCustomerInfoSaveButton() {
-		waitForElementClickable(driver, MyAccountPUI.CUSTOMER_INFO_SAVE_BUTTON);
-		clickToElement(driver, MyAccountPUI.CUSTOMER_INFO_SAVE_BUTTON);
+	public void clickToSaveButtonAtCustomerInfo() {
+		waitForElementClickable(driver, MyAccountPUI.SAVE_BUTTON_AT_CUSTOMER_INFO);
+		clickToElement(driver, MyAccountPUI.SAVE_BUTTON_AT_CUSTOMER_INFO);
 	}
 
 	public void clickToAddresses() {
@@ -117,7 +117,7 @@ public class MyAccountPO extends BasePage {
 		clickToElement(driver, MyAccountPUI.ADD_NEW_BUTTON);
 	}
 
-	public void filterAddressData(String fName, String lName, String email, String company, String country,
+	public void enterToAddressData(String fName, String lName, String email, String company, String country,
 			String state, String city, String add1, String add2, String zip, String phone, String fax) {
 		enterToAddressFirstName(fName);
 		enterToAddressLastName(lName);
@@ -193,9 +193,9 @@ public class MyAccountPO extends BasePage {
 		sendkeysToElement(driver, MyAccountPUI.ADDRESS_FAX_TEXTBOX, fax);
 	}
 
-	public void clickToAddressSaveButton() {
-		waitForElementVisible(driver, MyAccountPUI.ADDRESS_SAVE_BUTTON);
-		clickToElement(driver, MyAccountPUI.ADDRESS_SAVE_BUTTON);
+	public void clickToSaveButtonAtAddress() {
+		waitForElementVisible(driver, MyAccountPUI.SAVE_BUTTON_AT_ADDRESS);
+		clickToElement(driver, MyAccountPUI.SAVE_BUTTON_AT_ADDRESS);
 	}
 
 	public String getValueOfAddressTitle() {
@@ -253,17 +253,17 @@ public class MyAccountPO extends BasePage {
 		clickToElement(driver, MyAccountPUI.CHANGE_PASSWORD_LINK);
 	}
 
-	public void enterToOldPassword(String oldPass) {
+	public void enterToOldPasswordTextBox(String oldPass) {
 		waitForElementVisible(driver, MyAccountPUI.OLD_PASSWORD_TEXTBOX);
 		sendkeysToElement(driver, MyAccountPUI.OLD_PASSWORD_TEXTBOX, oldPass);
 	}
 
-	public void enterToNewPassword(String newPass) {
+	public void enterToNewPasswordTextBox(String newPass) {
 		waitForElementVisible(driver, MyAccountPUI.NEW_PASSWORD_TEXTBOX);
 		sendkeysToElement(driver, MyAccountPUI.NEW_PASSWORD_TEXTBOX, newPass);
 	}
 
-	public void enterToConfirmNewPassword(String confirm) {
+	public void enterToConfirmNewPasswordTextBox(String confirm) {
 		waitForElementVisible(driver, MyAccountPUI.CONFIRM_PASSWORD_TEXTBOX);
 		sendkeysToElement(driver, MyAccountPUI.CONFIRM_PASSWORD_TEXTBOX, confirm);
 	}
