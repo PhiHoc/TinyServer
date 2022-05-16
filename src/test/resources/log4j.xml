@@ -35,7 +35,7 @@
 		</layout>
 	</appender>
 
-	<category name="com.nopcommerce.register">
+	<category name="com.tinyServer.login">
 		<priority value="all" />
 		<appender-ref ref="console" />
 		<appender-ref ref="logfile" />

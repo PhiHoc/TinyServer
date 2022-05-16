@@ -12976,3 +12976,211 @@
 [INFO ] [2022-03-02 17:47:01,521]  -------------------------- PASSED -------------------------- 
 [INFO ] [2022-03-02 17:47:01,521] Re-order - Step 50: Verify order sub total
 [INFO ] [2022-03-02 17:47:01,573]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 13:26:25,261] Get signup page
+[INFO ] [2022-05-16 13:26:25,380] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 13:26:26,162] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 13:26:26,808] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 13:26:28,090] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 13:26:29,085] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 13:34:38,173] Get signup page
+[INFO ] [2022-05-16 13:34:38,253] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 13:34:38,985] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 13:34:39,599] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 13:34:40,898] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 13:34:41,646] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 13:35:06,713] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 13:35:07,414] Add user - Step 3: Enter to user 1 first name
+[INFO ] [2022-05-16 13:35:09,696] Add user - Step 4: Enter to user 1 last name
+[INFO ] [2022-05-16 13:35:10,410] Add user - Step 5: Enter to user 1 email
+[INFO ] [2022-05-16 13:35:11,146] Add user - Step 6: Click to user 1 start date
+[INFO ] [2022-05-16 13:35:11,858] Add user - Step 7: Select user 1 start month
+[INFO ] [2022-05-16 13:35:13,108] Add user - Step 8: Select user 1 start year
+[INFO ] [2022-05-16 13:35:14,322] Add user - Step 9: Select user 1 start day
+[INFO ] [2022-05-16 13:35:14,937] Add user - Step 10: Select user 1 manager
+[INFO ] [2022-05-16 13:37:26,465] Get signup page
+[INFO ] [2022-05-16 13:37:26,548] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 13:37:27,268] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 13:37:27,894] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 13:37:29,126] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 13:37:29,911] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 13:37:51,630] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 13:37:52,833] Add user - Step 3: Enter to user 1 first name
+[INFO ] [2022-05-16 13:37:55,729] Add user - Step 4: Enter to user 1 last name
+[INFO ] [2022-05-16 13:37:56,642] Add user - Step 5: Enter to user 1 email
+[INFO ] [2022-05-16 13:37:57,501] Add user - Step 6: Click to user 1 start date
+[INFO ] [2022-05-16 13:37:58,243] Add user - Step 7: Select user 1 start month
+[INFO ] [2022-05-16 13:37:59,559] Add user - Step 8: Select user 1 start year
+[INFO ] [2022-05-16 13:38:00,814] Add user - Step 9: Select user 1 start day
+[INFO ] [2022-05-16 13:38:01,420] Add user - Step 10: Select user 1 manager
+[INFO ] [2022-05-16 13:42:42,022] Get signup page
+[INFO ] [2022-05-16 13:42:42,116] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 13:42:42,836] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 13:42:43,449] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 13:42:44,689] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 13:42:45,454] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 13:43:09,212] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 13:43:10,391] Add user - Step 3: Enter to user 1 first name
+[INFO ] [2022-05-16 13:43:12,196] Add user - Step 4: Enter to user 1 last name
+[INFO ] [2022-05-16 13:43:12,925] Add user - Step 5: Enter to user 1 email
+[INFO ] [2022-05-16 13:43:13,674] Add user - Step 6: Click to user 1 start date
+[INFO ] [2022-05-16 13:43:14,360] Add user - Step 7: Select user 1 start month
+[INFO ] [2022-05-16 13:43:15,608] Add user - Step 8: Select user 1 start year
+[INFO ] [2022-05-16 13:43:16,821] Add user - Step 9: Select user 1 start day
+[INFO ] [2022-05-16 13:43:17,433] Add user - Step 10: Select user 1 manager
+[INFO ] [2022-05-16 14:01:05,625] Get signup page
+[INFO ] [2022-05-16 14:01:05,710] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:01:06,442] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:01:07,056] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:01:08,355] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:01:09,121] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:01:34,457] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 14:01:35,698] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 14:01:44,489] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 14:12:28,149] Get signup page
+[INFO ] [2022-05-16 14:12:28,233] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:12:28,967] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:12:29,578] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:12:30,819] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:12:31,596] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:12:56,934] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 14:12:57,638] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 14:13:06,007] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 14:13:13,077] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 14:13:13,712] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 14:14:27,737] Get signup page
+[INFO ] [2022-05-16 14:14:27,813] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:14:28,594] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:14:29,222] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:14:32,071] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:14:32,858] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:14:54,984] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 14:14:56,190] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 14:15:04,420] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 14:15:11,485] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 14:15:12,123] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 14:18:19,948] Get signup page
+[INFO ] [2022-05-16 14:18:20,031] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:18:20,769] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:18:21,394] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:18:22,726] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:18:23,525] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:20:50,079] Get signup page
+[INFO ] [2022-05-16 14:20:50,188] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:20:50,982] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:20:51,627] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:20:52,918] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:20:53,751] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:21:35,126] Get signup page
+[INFO ] [2022-05-16 14:21:35,222] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:21:36,012] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:21:36,651] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:21:37,972] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:21:38,799] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:22:49,322] Get signup page
+[INFO ] [2022-05-16 14:22:49,452] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 14:22:50,356] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 14:22:51,026] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 14:22:52,535] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 14:22:53,478] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 14:23:21,749] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 14:23:23,044] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 14:23:33,070] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 14:23:40,606] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 14:23:41,272] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 14:23:42,280]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:05:58,550] Get signup page
+[INFO ] [2022-05-16 15:05:58,745] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:05:59,654] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:06:00,301] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:06:02,096] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:06:02,874] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:06:41,691] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:06:42,998] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 15:06:52,132] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 15:06:59,999] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 15:07:00,731] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 15:07:01,647]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:15:35,350] Get signup page
+[INFO ] [2022-05-16 15:15:35,460] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:15:36,183] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:15:36,834] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:15:38,106] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:15:38,859] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:16:12,856] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:20:01,272] Get signup page
+[INFO ] [2022-05-16 15:20:01,389] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:20:02,201] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:20:02,814] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:20:04,067] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:20:04,842] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:21:47,136] Get signup page
+[INFO ] [2022-05-16 15:21:47,221] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:21:47,952] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:21:48,586] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:21:49,842] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:21:50,776] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:23:01,248] Get signup page
+[INFO ] [2022-05-16 15:23:01,335] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:23:02,055] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:23:02,711] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:23:04,510] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:23:05,414] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:26:35,469] Get signup page
+[INFO ] [2022-05-16 15:26:35,548] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:26:36,287] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:26:36,901] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:26:38,153] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:26:39,033] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:28:32,134] Get signup page
+[INFO ] [2022-05-16 15:28:32,224] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:28:32,985] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:28:33,647] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:28:34,945] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:28:36,063] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:30:18,857] Get signup page
+[INFO ] [2022-05-16 15:30:18,952] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:30:19,720] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:30:20,362] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:30:21,753] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:30:22,778] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:30:34,121] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:31:32,782] Get signup page
+[INFO ] [2022-05-16 15:31:32,873] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:31:33,669] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:31:34,325] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:31:35,609] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:31:36,573] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:31:58,882] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:32:06,523] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 15:33:21,801] Get signup page
+[INFO ] [2022-05-16 15:33:21,915] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:33:22,692] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:33:23,333] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:33:24,618] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:33:25,462] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:33:47,610] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:33:48,848] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 15:33:57,385] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 15:34:04,780] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 15:34:05,599] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 15:34:06,244]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:34:06,245] Add user - Step 7: Verify user 1 data
+[INFO ] [2022-05-16 15:34:06,314]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:34:06,315] Add user - Step 8: Verify user 2 data
+[INFO ] [2022-05-16 15:34:06,385]  -------------------------- FAILED -------------------------- 
+[INFO ] [2022-05-16 15:35:27,049] Get signup page
+[INFO ] [2022-05-16 15:35:27,138] Login to system - Step 1: Enter email
+[INFO ] [2022-05-16 15:35:27,913] Login to system - Step 2: Click continue button
+[INFO ] [2022-05-16 15:35:28,551] Login to system - Step 3: Enter password
+[INFO ] [2022-05-16 15:35:29,898] Login to system - Step 4: Click signin button
+[INFO ] [2022-05-16 15:35:30,712] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-16 15:35:53,360] Add user - Step 2: Click to add people
+[INFO ] [2022-05-16 15:35:54,593] Add user - Step 3: Enter to user 1 data
+[INFO ] [2022-05-16 15:36:03,372] Add user - Step 4: Enter to user 2 data
+[INFO ] [2022-05-16 15:36:10,791] Add user - Step 5: Click to add people button
+[INFO ] [2022-05-16 15:36:11,692] Add user - Step 6: Verify congratulation page display
+[INFO ] [2022-05-16 15:36:12,222]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:36:12,223] Add user - Step 7: Verify user 1 data
+[INFO ] [2022-05-16 15:36:12,294]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-16 15:36:12,294] Add user - Step 8: Verify user 2 data
+[INFO ] [2022-05-16 15:36:12,378]  -------------------------- PASSED -------------------------- 

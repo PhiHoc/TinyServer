@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="Nop commerce" parallel="false" preserve-order="true">
+<suite name="Tiny Server" parallel="false" preserve-order="true">
 
 	<listeners>
 		<listener class-name="commons.MethodListener" />
@@ -8,7 +8,7 @@
 		<listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
 	</listeners>
 
-	<parameter name="url" value="https://demo.nopcommerce.com/" />
+	<parameter name="url" value="https://staging.tinyserver.info/auth" />
 	
 <!-- 	<test name="Run on FIREFOX"> -->
 <!-- 		<parameter name="browser" value="firefox"></parameter> -->
@@ -22,11 +22,7 @@
 	 <test name="Run on CHROME">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-				<class name="com.nopcommerce.register.RegisterTabTest" />
-				<methods>
-					<include name="TC_03_Register_With_Valid_Data" />
-				</methods>
-				<class name="com.nopcommerce.register.LoginTabTest" />
+				<class name="com.tinyServer.login.LoginTabTest" />
 		</classes>
 	</test>
 </suite>
