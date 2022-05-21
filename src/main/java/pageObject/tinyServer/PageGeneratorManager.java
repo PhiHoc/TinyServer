@@ -3,7 +3,12 @@ package pageObject.tinyServer;
 import org.openqa.selenium.WebDriver;
 
 public class PageGeneratorManager {
-	public static LoginPO getSingupPage (WebDriver driver) {
+	
+	public static SignUpPO getSingupPage (WebDriver driver) {
+		return new SignUpPO(driver);
+	}
+	
+	public static LoginPO getLoginPage (WebDriver driver) {
 		return new LoginPO(driver);
 	}
 	
