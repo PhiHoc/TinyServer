@@ -7,7 +7,9 @@ public class HomePUI {
 	public static final String LASTNAME_TEXTBOX_DYNAMIC = "(//*[@field='lastName'])[%s]";
 	public static final String EMAIL_TEXTBOX_DYNAMIC = "(//*[@field='email'])[%s]";
 	public static final String START_DATE_DYNAMIC = "(//*[@field='startDate'])[%s]";
-	//div[@class='DateItem__item___14Cn2 DatesPicker__cell___3oOSl DateItem__inCurrentMonth___3N-tW']
+	public static final String DATE_NEXT_LINK = "//*[text()='chevron_right']";
+	public static final String DATE_PREVIOUS_LINK = "//*[text()='chevron_left']";
+	public static final String DATE_MONTH_YEAR = "//*[@class='Calendar__title___1bWgS']";
 	public static final String DAY_PICKER = "//div[@class='DatesPicker__grid___GHx86 DatesPicker__container___9GkKN']/div";
 	public static final String MANAGER_SELECT_DYNAMIC = "(//div[@class='Selecteds__contentWrapper___29qk8'])[%s]";
 	public static final String MANAGER_DROPDOWN_DYNAMIC = "//*[@class='Dropdown__dropdown___1qf8H']//*[text()='%s']";

@@ -47,25 +47,6 @@ public class HomePO extends BasePage{
 		clickToElement(driver, HomePUI.START_DATE_DYNAMIC, index);
 	}
 
-//	public void selectUserStartMonth(String month) {
-//		waitForElementClickable(driver, HomePUI.MONTH_PICKER);
-//		clickToElement(driver, HomePUI.MONTH_PICKER);
-//		waitForElementClickable(driver, HomePUI.MONTH_AND_YEAR_PICKER_DYNAMIC, month);
-//		clickToElement(driver, HomePUI.MONTH_AND_YEAR_PICKER_DYNAMIC, month);
-//	}
-//
-//	public void selectUserStartYear(String year) {
-//		waitForElementClickable(driver, HomePUI.YEAR_PICKER);
-//		clickToElement(driver, HomePUI.YEAR_PICKER);
-//		waitForElementClickable(driver, HomePUI.MONTH_AND_YEAR_PICKER_DYNAMIC, year);
-//		clickToElement(driver, HomePUI.MONTH_AND_YEAR_PICKER_DYNAMIC, year);
-//	}
-//
-//	public void selectUserStartDay(String day) {
-//		waitForElementClickable(driver, HomePUI.DAY_PICKER_DYNAMIC, day);
-//		clickToElement(driver, HomePUI.DAY_PICKER_DYNAMIC, day);
-//	}
-
 	public void selectUserManager(String managerName, String index) {
 		waitForElementClickable(driver, HomePUI.MANAGER_SELECT_DYNAMIC, index);
 		clickToElement(driver, HomePUI.MANAGER_SELECT_DYNAMIC, index);
@@ -91,9 +72,15 @@ public class HomePO extends BasePage{
 	
 	public void selectStartDate(String startDate) {
 		waitForAllElementVisible(driver, HomePUI.DAY_PICKER);
-		List<WebElement> elements = getElements(driver, HomePUI.DAY_PICKER);
+		WebElement nextLink = getElement(driver, HomePUI.DATE_NEXT_LINK);
+		WebElement previousLink = getElement(driver, HomePUI.DATE_PREVIOUS_LINK);
+		WebElement monthYear = getElement(driver, HomePUI.DATE_MONTH_YEAR);
+		
 		waitForElementClickable(driver, HomePUI.DAY_PICKER);
-		DateUtil.selectDatePicker(elements, startDate);
+		waitForElementClickable(driver, HomePUI.DATE_NEXT_LINK);
+		waitForElementClickable(driver, HomePUI.DATE_PREVIOUS_LINK);
+		
+		DateUtil.selectDatePicker(driver,HomePUI.DAY_PICKER,nextLink,previousLink,monthYear, startDate);
 	}
 
 	public void clickToAddPeopleButton() {
@@ -121,10 +108,6 @@ public class HomePO extends BasePage{
 		waitForElementClickable(driver, HomePUI.LOGOUT_BUTTON);
 		clickToElement(driver, HomePUI.LOGOUT_BUTTON);
 		return PageGeneratorManager.getLoginPage(driver);
-	}
-	
-	public void pickDatePicker() {
-		
 	}
 
 }

@@ -16,6 +16,7 @@ import pageObject.tinyServer.HomePO;
 import pageObject.tinyServer.LoginPO;
 import pageObject.tinyServer.PageGeneratorManager;
 import pageObject.tinyServer.SignUpPO;
+import utilities.DateUtil;
 import utilities.RandomUtil;
 
 public class LoginTabTest extends BaseTest {
@@ -77,7 +78,7 @@ public class LoginTabTest extends BaseTest {
 		homePO = signupPO.clickToStartTrialButton();
 	}
 	
-	@Test
+	//@Test
 	public void TC_02_LogOut_From_System() {
 		log.info("Logout from system - Step 1: Click to user avatar");
 		homePO.clickToUserAvatar();
@@ -87,7 +88,7 @@ public class LoginTabTest extends BaseTest {
 
 	}
 
-	@Test
+	//@Test
 	public void TC_03_Login_To_System_With_Registered_Account() {
 		
 		log.info("Login to system - Step 1: Enter email");
@@ -117,8 +118,10 @@ public class LoginTabTest extends BaseTest {
 		log.info("Add user - Step 3: Enter to user data");
 
 		int index = 1;
+		String startDate = DateUtil.getCurrentDayAfter(30);
+		
 		for (UserData user : userList) {
-			homePO.enterUserDataByIndex(index, user.FIRSTNAME, user.LASTNAME, user.EMAIL, user.START_DATE, manager.fullname);
+			homePO.enterUserDataByIndex(index, user.FIRSTNAME, user.LASTNAME, user.EMAIL, startDate, manager.fullname);
 			index++;
 		}
 
@@ -141,7 +144,7 @@ public class LoginTabTest extends BaseTest {
 
 	}
 
-	@AfterClass
+//	@AfterClass
 	public void afterClass() {
 		driver.quit();
 	}

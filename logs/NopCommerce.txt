@@ -1,25 +1,19 @@
-[INFO ] [2022-05-21 15:23:47,802] Get signup page
-[INFO ] [2022-05-21 15:23:47,894] Singup an account - Step 1: Enter email
-[INFO ] [2022-05-21 15:23:48,650] Singup an account - Step 2: Click to next button
-[INFO ] [2022-05-21 15:23:49,294] Singup an account - Step 3: Enter full name
-[INFO ] [2022-05-21 15:23:49,989] Singup an account - Step 4: Click to next button
-[INFO ] [2022-05-21 15:23:50,584] Singup an account - Step 5: Enter company name
-[INFO ] [2022-05-21 15:23:51,250] Singup an account - Step 6: Click to next button
-[INFO ] [2022-05-21 15:23:51,854] Singup an account - Step 7: Enter employees number
-[INFO ] [2022-05-21 15:23:52,526] Singup an account - Step 8: Click to next button
-[INFO ] [2022-05-21 15:23:53,119] Singup an account - Step 9: Enter phone number
-[INFO ] [2022-05-21 15:23:53,781] Singup an account - Step 10: Click to next button
-[INFO ] [2022-05-21 15:23:54,372] Singup an account - Step 11: Enter password
-[INFO ] [2022-05-21 15:23:55,029] Singup an account - Step 12: Click to next button
-[INFO ] [2022-05-21 15:24:14,565] Logout from system - Step 1: Click to user avatar
-[INFO ] [2022-05-21 15:24:19,843] Logout from system - Step 2: Click to logout button
-[INFO ] [2022-05-21 15:24:27,434] Login to system - Step 1: Enter email
-[INFO ] [2022-05-21 15:24:28,125] Login to system - Step 2: Click continue button
-[INFO ] [2022-05-21 15:24:28,732] Login to system - Step 3: Enter password
-[INFO ] [2022-05-21 15:24:29,937] Login to system - Step 4: Click signin button
-[INFO ] [2022-05-21 15:24:30,558] Add user - Step 1: Click to setting menu
-[INFO ] [2022-05-21 15:24:58,724] Add user - Step 2: Click to add people
-[INFO ] [2022-05-21 15:24:59,934] Add user - Step 3: Enter to user data
-[INFO ] [2022-05-21 15:25:13,006] Add user - Step 4: Click to add people button
-[INFO ] [2022-05-21 15:25:13,645] Add user - Step 5: Verify congratulation page display
-[INFO ] [2022-05-21 15:25:14,533]  -------------------------- PASSED -------------------------- 
+[INFO ] [2022-05-24 15:48:59,980] Get signup page
+[INFO ] [2022-05-24 15:49:00,069] Singup an account - Step 1: Enter email
+[INFO ] [2022-05-24 15:49:00,797] Singup an account - Step 2: Click to next button
+[INFO ] [2022-05-24 15:49:01,425] Singup an account - Step 3: Enter full name
+[INFO ] [2022-05-24 15:49:02,371] Singup an account - Step 4: Click to next button
+[INFO ] [2022-05-24 15:49:03,220] Singup an account - Step 5: Enter company name
+[INFO ] [2022-05-24 15:49:03,909] Singup an account - Step 6: Click to next button
+[INFO ] [2022-05-24 15:49:04,532] Singup an account - Step 7: Enter employees number
+[INFO ] [2022-05-24 15:49:05,210] Singup an account - Step 8: Click to next button
+[INFO ] [2022-05-24 15:49:05,806] Singup an account - Step 9: Enter phone number
+[INFO ] [2022-05-24 15:49:06,460] Singup an account - Step 10: Click to next button
+[INFO ] [2022-05-24 15:49:07,051] Singup an account - Step 11: Enter password
+[INFO ] [2022-05-24 15:49:07,701] Singup an account - Step 12: Click to next button
+[INFO ] [2022-05-24 15:49:19,095] Add user - Step 1: Click to setting menu
+[INFO ] [2022-05-24 15:49:46,562] Add user - Step 2: Click to add people
+[INFO ] [2022-05-24 15:49:47,763] Add user - Step 3: Enter to user data
+[INFO ] [2022-05-24 15:50:03,798] Add user - Step 4: Click to add people button
+[INFO ] [2022-05-24 15:50:04,428] Add user - Step 5: Verify congratulation page display
+[INFO ] [2022-05-24 15:50:05,286]  -------------------------- PASSED -------------------------- 
